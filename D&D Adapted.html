@@ -432,7 +432,7 @@
 					</div>
 					<div class="sheet-npc-section sheet-npc-section-details">
 						<input type="hidden" name="attr_npc_saving_flag" value="" class="sheet-field-toggle">
-						<div class="sheet-npc-section-saving-throws">
+						<div class="sheet-npc-section-testes_de_resistencia">
 							<label>Saving Throws</label>
 							<input type="hidden" name="attr_npc_potencia_save_flag" value="0" class="sheet-field-toggle">
 							<button type="roll" name="roll_npc_potencia_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Potência Save}} {{mod=[[[[@{npc_potencia_save}]][STR SAVE]]]}} {{r1=[[@{d20}+[[@{npc_potencia_save}]][STR SAVE]]]}} @{rtype}+[[@{npc_potencia_save}]][STR SAVE]]]}} {{type=Save}}">
@@ -1107,7 +1107,7 @@
 								<div class="sheet-container-panel sheet-pc-saves">
 									<div class="sheet-container-header">Saving Throws</div>
 									<div class="sheet-container-body">
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_potencia_save_prof" title="@{potencia_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1115,7 +1115,7 @@
 											<span name="attr_potencia_save_bonus" title="@{potencia_save_bonus}">0</span>
 											<button type="roll" name="roll_potencia_save" value="@{wtype}&{template:simple} {{rname=Potência Save}} {{mod=@{potencia_save_bonus}}} {{r1=[[@{d20}+@{potencia_save_bonus}@{pbd_safe}]]}} @{rtype}+@{potencia_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Potência</button>
 										</div>
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_agilidade_save_prof" title="@{agilidade_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1123,7 +1123,7 @@
 											<span name="attr_agilidade_save_bonus" title="@{agilidade_save_bonus}">0</span>
 											<button type="roll" name="roll_agilidade_save" value="@{wtype}&{template:simple} {{rname=Agilidade Save}} {{mod=@{agilidade_save_bonus}}} {{r1=[[@{d20}+@{agilidade_save_bonus}@{pbd_safe}]]}} @{rtype}+@{agilidade_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Agilidade</button>
 										</div>
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_vigor_save_prof" title="@{vigor_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1131,7 +1131,7 @@
 											<span name="attr_vigor_save_bonus" title="@{vigor_save_bonus}">0</span>
 											<button type="roll" name="roll_vigor_save" value="@{wtype}&{template:simple} {{rname=Vigor Save}} {{mod=@{vigor_save_bonus}}} {{r1=[[@{d20}+@{vigor_save_bonus}@{pbd_safe}]]}} @{rtype}+@{vigor_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Vigor</button>
 										</div>
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_presenca_save_prof" title="@{presenca_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1139,7 +1139,7 @@
 											<span name="attr_presenca_save_bonus" title="@{presenca_save_bonus}">0</span>
 											<button type="roll" name="roll_presenca_save" value="@{wtype}&{template:simple} {{rname=Presença Save}} {{mod=@{presenca_save_bonus}}} {{r1=[[@{d20}+@{presenca_save_bonus}@{pbd_safe}]]}} @{rtype}+@{presenca_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Presença</button>
 										</div>
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_astucia_save_prof" title="@{astucia_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1147,7 +1147,7 @@
 											<span name="attr_astucia_save_bonus" title="@{astucia_save_bonus}">0</span>
 											<button type="roll" name="roll_astucia_save" value="@{wtype}&{template:simple} {{rname=Astúcia Save}} {{mod=@{astucia_save_bonus}}} {{r1=[[@{d20}+@{astucia_save_bonus}@{pbd_safe}]]}} @{rtype}+@{astucia_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Astúcia</button>
 										</div>
-										<div class="sheet-pc-saving-throw">
+										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_vontade_save_prof" title="@{vontade_save_prof}" value="(@{pb})">
 												<span></span>
@@ -1184,7 +1184,7 @@
 															</div>
 														</div>
 														<div class="sheet-toggle-unchecked">
-															<div class="sheet-pc-saving-throw-modifier">
+															<div class="sheet-pc-teste_de_resistencia-modifier">
 																<div class="sheet-checkbox-image">
 																	<input type="checkbox" name="attr_global_save_active_flag" value="1">
 																	<span></span>
@@ -8491,14 +8491,14 @@
 						var global = v["globalsavemod"] && !isNaN(v["globalsavemod"]) ? parseInt(v["globalsavemod"], 10) : 0;
 						var items = 0;
 						_.each(idarray, function(currentID) {
-							if (v["repeating_inventory_" + currentID + "_equipped"] && v["repeating_inventory_" + currentID + "_equipped"] === "1" && v["repeating_inventory_" + currentID + "_itemmodifiers"] && (v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf("saving throws") > -1 || v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf(attr + " save") > -1)) {
+							if (v["repeating_inventory_" + currentID + "_equipped"] && v["repeating_inventory_" + currentID + "_equipped"] === "1" && v["repeating_inventory_" + currentID + "_itemmodifiers"] && (v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf("testes de resistência") > -1 || v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf(attr + " save") > -1)) {
 								var mods = v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().split(",");
 								_.each(mods, function(mod) {
 									if (mod.indexOf(attr + " save") > -1) {
 										var substr = mod.slice(mod.lastIndexOf(attr + " save") + attr.length + " save".length);
 										var bonus = substr && substr.length > 0 && !isNaN(parseInt(substr, 10)) ? parseInt(substr, 10) : 0;
-									} else if (mod.indexOf("saving throws") > -1) {
-										var substr = mod.slice(mod.lastIndexOf("saving throws") + "saving throws".length);
+									} else if (mod.indexOf("testes de resistência") > -1) {
+										var substr = mod.slice(mod.lastIndexOf("testes de resistência") + "testes de resistência".length);
 										var bonus = substr && substr.length > 0 && !isNaN(parseInt(substr, 10)) ? parseInt(substr, 10) : 0;
 									};
 									if (bonus && bonus != 0) {
@@ -10410,7 +10410,7 @@
 					if (mod.indexOf("spell") > -1) {
 						update_spell_info();
 					};
-					if (mod.indexOf("saving throws") > -1) {
+					if (mod.indexOf("testes de resistência") > -1) {
 						update_all_saves();
 					};
 					if (mod.indexOf("potencia save") > -1) {
