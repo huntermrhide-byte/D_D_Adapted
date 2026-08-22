@@ -95,40 +95,40 @@
 								</div>
 							</div>
 						</div>
-						<div class="sheet-form-fieldset sheet-form-fieldset-npc-saves">
-							<div class="sheet-form-fieldset-header">Saves</div>
+						<div class="sheet-form-fieldset sheet-form-fieldset-npc-resistencias">
+							<div class="sheet-form-fieldset-header">Resistências</div>
 							<div class="sheet-form-fieldset-body">
 								<div class="sheet-form-group">
 									<label>Potência</label>
-									<input type="text" name="attr_npc_potencia_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_potencia_resistencia_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Agilidade</label>
-									<input type="text" name="attr_npc_agilidade_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_agilidade_resistencia_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Vigor</label>
-									<input type="text" name="attr_npc_vigor_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_vigor_resistencia_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Presença</label>
-									<input type="text" name="attr_npc_presenca_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_presenca_resistencia_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Astúcia</label>
-									<input type="text" name="attr_npc_astucia_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_astucia_resistencia_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Vontade</label>
-									<input type="text" name="attr_npc_vontade_save_base" class="sheet-text-center">
+									<input type="text" name="attr_npc_vontade_resistencia_base" class="sheet-text-center">
 								</div>
 							</div>
-							<input type="hidden" name="attr_npc_potencia_save" value="@{potencia_mod}">
-							<input type="hidden" name="attr_npc_agilidade_save" value="@{agilidade_mod}">
-							<input type="hidden" name="attr_npc_vigor_save" value="@{vigor_mod}">
-							<input type="hidden" name="attr_npc_presenca_save" value="@{presenca_mod}">
-							<input type="hidden" name="attr_npc_astucia_save" value="@{astucia_mod}">
-							<input type="hidden" name="attr_npc_vontade_save" value="@{vontade_mod}">
+							<input type="hidden" name="attr_npc_potencia_resistencia" value="@{potencia_mod}">
+							<input type="hidden" name="attr_npc_agilidade_resistencia" value="@{agilidade_mod}">
+							<input type="hidden" name="attr_npc_vigor_resistencia" value="@{vigor_mod}">
+							<input type="hidden" name="attr_npc_presenca_resistencia" value="@{presenca_mod}">
+							<input type="hidden" name="attr_npc_astucia_resistencia" value="@{astucia_mod}">
+							<input type="hidden" name="attr_npc_vontade_resistencia" value="@{vontade_mod}">
 						</div>
 						<div class="sheet-form-fieldset sheet-form-fieldset-npc-skills">
 							<div class="sheet-form-fieldset-header">Skills</div>
@@ -434,35 +434,35 @@
 						<input type="hidden" name="attr_npc_saving_flag" value="" class="sheet-field-toggle">
 						<div class="sheet-npc-section-testes_de_resistencia">
 							<label>Saving Throws</label>
-							<input type="hidden" name="attr_npc_potencia_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_potencia_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Potência Save}} {{mod=[[[[@{npc_potencia_save}]][STR SAVE]]]}} {{r1=[[@{d20}+[[@{npc_potencia_save}]][STR SAVE]]]}} @{rtype}+[[@{npc_potencia_save}]][STR SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_potencia_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_potencia_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Potência Save}} {{mod=[[[[@{npc_potencia_resistencia}]][STR SAVE]]]}} {{r1=[[@{d20}+[[@{npc_potencia_resistencia}]][STR SAVE]]]}} @{rtype}+[[@{npc_potencia_resistencia}]][STR SAVE]]]}} {{type=Save}}">
 								<span>Potência</span>
-								<span name="attr_npc_potencia_save"></span>
+								<span name="attr_npc_potencia_resistencia"></span>
 							</button>
-							<input type="hidden" name="attr_npc_agilidade_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_agilidade_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Agilidade Save}} {{mod=[[[[@{npc_agilidade_save}]][DEX SAVE]]]}} {{r1=[[@{d20}+[[@{npc_agilidade_save}]][DEX SAVE]]]}} @{rtype}+[[@{npc_agilidade_save}]][DEX SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_agilidade_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_agilidade_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Agilidade Save}} {{mod=[[[[@{npc_agilidade_resistencia}]][DEX SAVE]]]}} {{r1=[[@{d20}+[[@{npc_agilidade_resistencia}]][DEX SAVE]]]}} @{rtype}+[[@{npc_agilidade_resistencia}]][DEX SAVE]]]}} {{type=Save}}">
 								<span>Agilidade</span>
-								<span name="attr_npc_agilidade_save"></span>
+								<span name="attr_npc_agilidade_resistencia"></span>
 							</button>
-							<input type="hidden" name="attr_npc_vigor_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_vigor_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Vigor Save}} {{mod=[[[[@{npc_vigor_save}]][CON SAVE]]]}} {{r1=[[@{d20}+[[@{npc_vigor_save}]][CON SAVE]]]}} @{rtype}+[[@{npc_vigor_save}]][CON SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_vigor_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_vigor_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Vigor Save}} {{mod=[[[[@{npc_vigor_resistencia}]][CON SAVE]]]}} {{r1=[[@{d20}+[[@{npc_vigor_resistencia}]][CON SAVE]]]}} @{rtype}+[[@{npc_vigor_resistencia}]][CON SAVE]]]}} {{type=Save}}">
 								<span>Vigor</span>
-								<span name="attr_npc_vigor_save"></span>
+								<span name="attr_npc_vigor_resistencia"></span>
 							</button>
-							<input type="hidden" name="attr_npc_presenca_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_presenca_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Presença Save}} {{mod=[[[[@{npc_presenca_save}]][INT SAVE]]]}} {{r1=[[@{d20}+[[@{npc_presenca_save}]][INT SAVE]]]}} @{rtype}+[[@{npc_presenca_save}]][INT SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_presenca_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_presenca_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Presença Save}} {{mod=[[[[@{npc_presenca_resistencia}]][INT SAVE]]]}} {{r1=[[@{d20}+[[@{npc_presenca_resistencia}]][INT SAVE]]]}} @{rtype}+[[@{npc_presenca_resistencia}]][INT SAVE]]]}} {{type=Save}}">
 								<span>Presença</span>
-								<span name="attr_npc_presenca_save"></span>
+								<span name="attr_npc_presenca_resistencia"></span>
 							</button>
-							<input type="hidden" name="attr_npc_astucia_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_astucia_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Astúcia Save}} {{mod=[[[[@{npc_astucia_save}]][WIS SAVE]]]}} {{r1=[[@{d20}+[[@{npc_astucia_save}]][WIS SAVE]]]}} @{rtype}+[[@{npc_astucia_save}]][WIS SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_astucia_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_astucia_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Astúcia Save}} {{mod=[[[[@{npc_astucia_resistencia}]][WIS SAVE]]]}} {{r1=[[@{d20}+[[@{npc_astucia_resistencia}]][WIS SAVE]]]}} @{rtype}+[[@{npc_astucia_resistencia}]][WIS SAVE]]]}} {{type=Save}}">
 								<span>Astúcia</span>
-								<span name="attr_npc_astucia_save"></span>
+								<span name="attr_npc_astucia_resistencia"></span>
 							</button>
-							<input type="hidden" name="attr_npc_vontade_save_flag" value="0" class="sheet-field-toggle">
-							<button type="roll" name="roll_npc_vontade_save" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Vontade Save}} {{mod=[[[[@{npc_vontade_save}]][CHA SAVE]]]}} {{r1=[[@{d20}+[[@{npc_vontade_save}]][CHA SAVE]]]}} @{rtype}+[[@{npc_vontade_save}]][CHA SAVE]]]}} {{type=Save}}">
+							<input type="hidden" name="attr_npc_vontade_resistencia_flag" value="0" class="sheet-field-toggle">
+							<button type="roll" name="roll_npc_vontade_resistencia" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Vontade Save}} {{mod=[[[[@{npc_vontade_resistencia}]][CHA SAVE]]]}} {{r1=[[@{d20}+[[@{npc_vontade_resistencia}]][CHA SAVE]]]}} @{rtype}+[[@{npc_vontade_resistencia}]][CHA SAVE]]]}} {{type=Save}}">
 								<span>Vontade</span>
-								<span name="attr_npc_vontade_save"></span>
+								<span name="attr_npc_vontade_resistencia"></span>
 							</button>
 						</div>
 						<input type="hidden" name="attr_npc_skills_flag" value="" class="sheet-field-toggle">
@@ -1104,62 +1104,62 @@
 										<span name="attr_pb" title="@{pb}"></span>
 									</div>
 								</div>
-								<div class="sheet-container-panel sheet-pc-saves">
+								<div class="sheet-container-panel sheet-pc-resistencias">
 									<div class="sheet-container-header">Saving Throws</div>
 									<div class="sheet-container-body">
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_potencia_save_prof" title="@{potencia_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_potencia_resistencia_prof" title="@{potencia_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_potencia_save_bonus" title="@{potencia_save_bonus}">0</span>
-											<button type="roll" name="roll_potencia_save" value="@{wtype}&{template:simple} {{rname=Potência Save}} {{mod=@{potencia_save_bonus}}} {{r1=[[@{d20}+@{potencia_save_bonus}@{pbd_safe}]]}} @{rtype}+@{potencia_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Potência</button>
+											<span name="attr_potencia_resistencia_bonus" title="@{potencia_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_potencia_resistencia" value="@{wtype}&{template:simple} {{rname=Potência Save}} {{mod=@{potencia_resistencia_bonus}}} {{r1=[[@{d20}+@{potencia_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{potencia_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Potência</button>
 										</div>
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_agilidade_save_prof" title="@{agilidade_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_agilidade_resistencia_prof" title="@{agilidade_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_agilidade_save_bonus" title="@{agilidade_save_bonus}">0</span>
-											<button type="roll" name="roll_agilidade_save" value="@{wtype}&{template:simple} {{rname=Agilidade Save}} {{mod=@{agilidade_save_bonus}}} {{r1=[[@{d20}+@{agilidade_save_bonus}@{pbd_safe}]]}} @{rtype}+@{agilidade_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Agilidade</button>
+											<span name="attr_agilidade_resistencia_bonus" title="@{agilidade_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_agilidade_resistencia" value="@{wtype}&{template:simple} {{rname=Agilidade Save}} {{mod=@{agilidade_resistencia_bonus}}} {{r1=[[@{d20}+@{agilidade_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{agilidade_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Agilidade</button>
 										</div>
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_vigor_save_prof" title="@{vigor_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_vigor_resistencia_prof" title="@{vigor_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_vigor_save_bonus" title="@{vigor_save_bonus}">0</span>
-											<button type="roll" name="roll_vigor_save" value="@{wtype}&{template:simple} {{rname=Vigor Save}} {{mod=@{vigor_save_bonus}}} {{r1=[[@{d20}+@{vigor_save_bonus}@{pbd_safe}]]}} @{rtype}+@{vigor_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Vigor</button>
+											<span name="attr_vigor_resistencia_bonus" title="@{vigor_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_vigor_resistencia" value="@{wtype}&{template:simple} {{rname=Vigor Save}} {{mod=@{vigor_resistencia_bonus}}} {{r1=[[@{d20}+@{vigor_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{vigor_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Vigor</button>
 										</div>
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_presenca_save_prof" title="@{presenca_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_presenca_resistencia_prof" title="@{presenca_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_presenca_save_bonus" title="@{presenca_save_bonus}">0</span>
-											<button type="roll" name="roll_presenca_save" value="@{wtype}&{template:simple} {{rname=Presença Save}} {{mod=@{presenca_save_bonus}}} {{r1=[[@{d20}+@{presenca_save_bonus}@{pbd_safe}]]}} @{rtype}+@{presenca_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Presença</button>
+											<span name="attr_presenca_resistencia_bonus" title="@{presenca_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_presenca_resistencia" value="@{wtype}&{template:simple} {{rname=Presença Save}} {{mod=@{presenca_resistencia_bonus}}} {{r1=[[@{d20}+@{presenca_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{presenca_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Presença</button>
 										</div>
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_astucia_save_prof" title="@{astucia_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_astucia_resistencia_prof" title="@{astucia_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_astucia_save_bonus" title="@{astucia_save_bonus}">0</span>
-											<button type="roll" name="roll_astucia_save" value="@{wtype}&{template:simple} {{rname=Astúcia Save}} {{mod=@{astucia_save_bonus}}} {{r1=[[@{d20}+@{astucia_save_bonus}@{pbd_safe}]]}} @{rtype}+@{astucia_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Astúcia</button>
+											<span name="attr_astucia_resistencia_bonus" title="@{astucia_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_astucia_resistencia" value="@{wtype}&{template:simple} {{rname=Astúcia Save}} {{mod=@{astucia_resistencia_bonus}}} {{r1=[[@{d20}+@{astucia_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{astucia_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Astúcia</button>
 										</div>
 										<div class="sheet-pc-teste_de_resistencia">
 											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_vontade_save_prof" title="@{vontade_save_prof}" value="(@{pb})">
+												<input type="checkbox" name="attr_vontade_resistencia_prof" title="@{vontade_resistencia_prof}" value="(@{pb})">
 												<span></span>
 											</div>
-											<span name="attr_vontade_save_bonus" title="@{vontade_save_bonus}">0</span>
-											<button type="roll" name="roll_vontade_save" value="@{wtype}&{template:simple} {{rname=Vontade Save}} {{mod=@{vontade_save_bonus}}} {{r1=[[@{d20}+@{vontade_save_bonus}@{pbd_safe}]]}} @{rtype}+@{vontade_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Vontade</button>
+											<span name="attr_vontade_resistencia_bonus" title="@{vontade_resistencia_bonus}">0</span>
+											<button type="roll" name="roll_vontade_resistencia" value="@{wtype}&{template:simple} {{rname=Vontade Save}} {{mod=@{vontade_resistencia_bonus}}} {{r1=[[@{d20}+@{vontade_resistencia_bonus}@{pbd_safe}]]}} @{rtype}+@{vontade_resistencia_bonus}@{pbd_safe}]]}} {{global=@{global_resistencia_mod}}} @{charname_output}">Vontade</button>
 										</div>
-										<input type="hidden" name="attr_global_save_mod_flag" class="sheet-field-toggle">
+										<input type="hidden" name="attr_global_resistencia_mod_flag" class="sheet-field-toggle">
 										<div class="sheet-form sheet-form-inline">
 											<div class="sheet-form-header">Global Save Modifiers</div>
 											<div class="sheet-form-body">
-												<fieldset class="repeating_savemod">
+												<fieldset class="repeating_resistenciamod">
 													<div class="sheet-fieldset-item">
 														<div class="sheet-checkbox-cog">
 															<input type="checkbox" name="attr_options-flag" checked="checked"><span></span>
@@ -1172,13 +1172,13 @@
 																<div class="sheet-form-body">
 																	<div class="sheet-form-group">
 																		<label class="sheet-form-checkbox">
-																			<input type="checkbox" name="attr_global_save_active_flag" value="1">
+																			<input type="checkbox" name="attr_global_resistencia_active_flag" value="1">
 																		</label>
-																		<input type="text" name="attr_global_save_name">
+																		<input type="text" name="attr_global_resistencia_name">
 																	</div>
 																	<div class="sheet-form-group">
 																		<label>Roll:</label>
-																		<input type="text" name="attr_global_save_roll">
+																		<input type="text" name="attr_global_resistencia_roll">
 																	</div>
 																</div>
 															</div>
@@ -1186,10 +1186,10 @@
 														<div class="sheet-toggle-unchecked">
 															<div class="sheet-pc-teste_de_resistencia-modifier">
 																<div class="sheet-checkbox-image">
-																	<input type="checkbox" name="attr_global_save_active_flag" value="1">
+																	<input type="checkbox" name="attr_global_resistencia_active_flag" value="1">
 																	<span></span>
 																</div>
-																<span name="attr_global_save_name"></span><span name="attr_global_save_roll"></span>
+																<span name="attr_global_resistencia_name"></span><span name="attr_global_resistencia_roll"></span>
 															</div>
 														</div>
 													</div>
@@ -1742,45 +1742,45 @@
 									<div class="sheet-container-box sheet-pc-death">
 										<div class="sheet-container-header">
 											<input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-toggle">
-											<button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">
+											<button type="roll" name="roll_death_resistencia" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_resistencia_bonus}}} {{r1=[[@{d20}+@{death_resistencia_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_resistencia_mod}}} @{charname_output}">
 												Death Save Failures
 											</button>
 											<input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle">
-											<button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">
+											<button type="roll" name="roll_death_resistencia" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_resistencia_bonus}}} {{r1=[[@{d20}+@{death_resistencia_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_resistencia_mod}}} @{charname_output}">
 												Death Saves
 											</button>
 										</div>
 										<div class="sheet-container-body">
 											<input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle">
-											<div class="sheet-death-save-success">
+											<div class="sheet-death-resistencia-success">
 												<input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle">
 												<span>S:</span>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_success1" title="@{deathsave_success1}">
+													<input type="checkbox" name="attr_deathresistencia_success1" title="@{deathresistencia_success1}">
 													<span></span>
 												</div>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_success2" title="@{deathsave_success2}">
+													<input type="checkbox" name="attr_deathresistencia_success2" title="@{deathresistencia_success2}">
 													<span></span>
 												</div>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_success3" title="@{deathsave_success3}">
+													<input type="checkbox" name="attr_deathresistencia_success3" title="@{deathresistencia_success3}">
 													<span></span>
 												</div>
 											</div>
-											<div class="sheet-death-save-fail">
+											<div class="sheet-death-resistencia-fail">
 												<input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle">
 												<span>F:</span>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_fail1" title="@{deathsave_fail1}">
+													<input type="checkbox" name="attr_deathresistencia_fail1" title="@{deathresistencia_fail1}">
 													<span></span>
 												</div>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_fail2" title="@{deathsave_fail2}">
+													<input type="checkbox" name="attr_deathresistencia_fail2" title="@{deathresistencia_fail2}">
 													<span></span>
 												</div>
 												<div class="sheet-checkbox-image">
-													<input type="checkbox" name="attr_deathsave_fail3" title="@{deathsave_fail3}">
+													<input type="checkbox" name="attr_deathresistencia_fail3" title="@{deathresistencia_fail3}">
 													<span></span>
 												</div>
 											</div>
@@ -2152,10 +2152,10 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
+										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_resistencia_dc}}} {{r1=[[@{d20}+[[@{spell_resistencia_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<span name="attr_spell_resistencia_dc" title="@{spell_resistencia_dc}"></span>
 									</div>
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-attack">
@@ -2353,12 +2353,12 @@
 															</div>
 															<div class="sheet-form-group">
 																<label class="sheet-form-checkbox">
-																	<input type="checkbox" name="attr_saveflag" value="{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}">
+																	<input type="checkbox" name="attr_resistenciaflag" value="{{resistencia=1}} {{resistenciaattr=@{resistenciaattr}}} {{resistenciadesc=@{resistenciaeffect}}} {{resistenciadc=[[[[@{resistenciadc}]][SAVE]]]}}">
 																	<span>Saving Throw</span>
 																</label>
 															</div>
 															<div class="sheet-form-group">
-																<select name="attr_saveattr">
+																<select name="attr_resistenciaattr">
 																	<option value="Potência" selected="selected">STR</option>
 																	<option value="Agilidade">DEX</option>
 																	<option value="Vigor">CON</option>
@@ -2367,22 +2367,22 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>vs DC:</label>
-																<select name="attr_savedc">
-																	<option value="(@{spell_save_dc})" selected="selected">SPELL</option>
+																<select name="attr_resistenciadc">
+																	<option value="(@{spell_resistencia_dc})" selected="selected">SPELL</option>
 																	<option value="(@{potencia_mod}+8+@{spell_dc_mod}+@{pb})">STR</option>
 																	<option value="(@{agilidade_mod}+8+@{spell_dc_mod}+@{pb})">DEX</option>
 																	<option value="(@{vigor_mod}+8+@{spell_dc_mod}+@{pb})">CON</option>
 																	<option value="(@{presenca_mod}+8+@{spell_dc_mod}+@{pb})">INT</option>
 																	<option value="(@{astucia_mod}+8+@{spell_dc_mod}+@{pb})">WIS</option>
 																	<option value="(@{vontade_mod}+8+@{spell_dc_mod}+@{pb})">CHA</option>
-																	<option value="(@{saveflat})">FLAT</option>
+																	<option value="(@{resistenciaflat})">FLAT</option>
 																</select>
-																<input type="hidden" name="attr_savedc">
-																<input type="text" name="attr_saveflat" value="10">
+																<input type="hidden" name="attr_resistenciadc">
+																<input type="text" name="attr_resistenciaflat" value="10">
 															</div>
 															<div class="sheet-form-group">
 																<label>Save Effect:</label>
-																<input type="text" name="attr_saveeffect">
+																<input type="text" name="attr_resistenciaeffect">
 															</div>
 															<div class="sheet-form-group">
 																<label>Ammunition:</label>
@@ -2614,23 +2614,23 @@
 															<div class="sheet-form-body">
 																<div class="sheet-form-group">
 																	<select name="attr_affliction">
-																		<option value="Acute: Advantage on INT checks/saves">Acute</option>
+																		<option value="Acute: Advantage on INT checks/resistencias">Acute</option>
 																		<option value="Anxiety: Disadvantage on Stress checks">Anxiety</option>
-																		<option value="Courageous: Advantage on CHA checks/saves">Courageous</option>
-																		<option value="Fearful: Disadvantage on WIS checks/saves">Fearful</option>
+																		<option value="Courageous: Advantage on CHA checks/resistencias">Courageous</option>
+																		<option value="Fearful: Disadvantage on WIS checks/resistencias">Fearful</option>
 																		<option value="Focused: +2 to all attack rolls">Focused</option>
-																		<option value="Hopelessness: Disadvantage on STR checks/saves">Hopelessness</option>
+																		<option value="Hopelessness: Disadvantage on STR checks/resistencias">Hopelessness</option>
 																		<option value="Hypochondria: Hit point maximum is halved">Hypochondria</option>
-																		<option value="Irrational: Disadvantage on INT checks/saves">Irrational</option>
+																		<option value="Irrational: Disadvantage on INT checks/resistencias">Irrational</option>
 																		<option value="Lethargic: +1 exhaustion until removed">Lethargic</option>
 																		<option value="Mania: Disadvantage on attack rolls">Mania</option>
-																		<option value="Masochistic: Disadvantage on CON checks/saves">Masochistic</option>
+																		<option value="Masochistic: Disadvantage on CON checks/resistencias">Masochistic</option>
 																		<option value="Narcissistic: Disadvantage on ability checks">Narcissistic</option>
-																		<option value="Panic: Disadvantage on DEX checks/saves">Panic</option>
+																		<option value="Panic: Disadvantage on DEX checks/resistencias">Panic</option>
 																		<option value="Paranoid: Speed is halved">Paranoid</option>
-																		<option value="Perceptive: Advantage on WIS checks/saves">Perceptive</option>
+																		<option value="Perceptive: Advantage on WIS checks/resistencias">Perceptive</option>
 																		<option value="Powerful: +2 to all damage rolls">Powerful</option>
-																		<option value="Selfish: Disadvantage on CHA checks/saves">Selfish</option>
+																		<option value="Selfish: Disadvantage on CHA checks/resistencias">Selfish</option>
 																		<option value="Stalwart: +2 AC">Stalwart</option>
 																	</select>
 																</div>
@@ -3577,10 +3577,10 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
+										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_resistencia_dc}}} {{r1=[[@{d20}+[[@{spell_resistencia_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<span name="attr_spell_resistencia_dc" title="@{spell_resistencia_dc}"></span>
 									</div>
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-attack">
@@ -3782,7 +3782,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -3792,7 +3792,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -4007,7 +4007,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -4017,7 +4017,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -4232,7 +4232,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -4242,7 +4242,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -4457,7 +4457,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -4467,7 +4467,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -4682,7 +4682,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -4692,7 +4692,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -4907,7 +4907,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -4917,7 +4917,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -5132,7 +5132,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -5142,7 +5142,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -5357,7 +5357,7 @@
 															</div>
 															<div class="sheet-form-group">
 																<label>Saving Throw:</label>
-																<select name="attr_spellsave">
+																<select name="attr_spellresistencia">
 																	<option value="" selected="selected">&mdash;</option>
 																	<option value="Potência">STR</option>
 																	<option value="Agilidade">DEX</option>
@@ -5367,7 +5367,7 @@
 																	<option value="Vontade">CHA</option>
 																</select>
 																<label>Effect:</label>
-																<input type="text" name="attr_spellsavesuccess">
+																<input type="text" name="attr_spellresistenciasuccess">
 															</div>
 															<div class="sheet-form-group">
 																<label>Higher Lvl Cast Dmg:</label>
@@ -5583,7 +5583,7 @@
 																</div>
 																<div class="sheet-form-group">
 																	<label>Saving Throw:</label>
-																	<select name="attr_spellsave">
+																	<select name="attr_spellresistencia">
 																		<option value="" selected="selected">&mdash;</option>
 																		<option value="Potência">STR</option>
 																		<option value="Agilidade">DEX</option>
@@ -5593,7 +5593,7 @@
 																		<option value="Vontade">CHA</option>
 																	</select>
 																	<label>Effect:</label>
-																	<input type="text" name="attr_spellsavesuccess">
+																	<input type="text" name="attr_spellresistenciasuccess">
 																</div>
 																<div class="sheet-form-group">
 																	<label>Higher Lvl Cast Dmg:</label>
@@ -5808,7 +5808,7 @@
 																</div>
 																<div class="sheet-form-group">
 																	<label>Saving Throw:</label>
-																	<select name="attr_spellsave">
+																	<select name="attr_spellresistencia">
 																		<option value="" selected="selected">&mdash;</option>
 																		<option value="Potência">STR</option>
 																		<option value="Agilidade">DEX</option>
@@ -5818,7 +5818,7 @@
 																		<option value="Vontade">CHA</option>
 																	</select>
 																	<label>Effect:</label>
-																	<input type="text" name="attr_spellsavesuccess">
+																	<input type="text" name="attr_spellresistenciasuccess">
 																</div>
 																<div class="sheet-form-group">
 																	<label>Higher Lvl Cast Dmg:</label>
@@ -6131,38 +6131,38 @@
 													<div class="sheet-form-fieldset-header">Saving Throws</div>
 													<div class="sheet-form-fieldset-body">
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_potencia_save_prof}">
-																<input type="checkbox" name="attr_cust_potencia_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_potencia_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_potencia_resistencia_prof" value="(@{pb})">
 																<span>Potência</span>
 															</label>
 														</div>
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_agilidade_save_prof}">
-																<input type="checkbox" name="attr_cust_agilidade_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_agilidade_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_agilidade_resistencia_prof" value="(@{pb})">
 																<span>Agilidade</span>
 															</label>
 														</div>
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_vigor_save_prof}">
-																<input type="checkbox" name="attr_cust_vigor_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_vigor_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_vigor_resistencia_prof" value="(@{pb})">
 																<span>Vigor</span>
 															</label>
 														</div>
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_presenca_save_prof}">
-																<input type="checkbox" name="attr_cust_presenca_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_presenca_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_presenca_resistencia_prof" value="(@{pb})">
 																<span>Presença</span>
 															</label>
 														</div>
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_astucia_save_prof}">
-																<input type="checkbox" name="attr_cust_astucia_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_astucia_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_astucia_resistencia_prof" value="(@{pb})">
 																<span>Astúcia</span>
 															</label>
 														</div>
 														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_vontade_save_prof}">
-																<input type="checkbox" name="attr_cust_vontade_save_prof" value="(@{pb})">
+															<label class="sheet-form-checkbox" title="@{cust_vontade_resistencia_prof}">
+																<input type="checkbox" name="attr_cust_vontade_resistencia_prof" value="(@{pb})">
 																<span>Vontade</span>
 															</label>
 														</div>
@@ -6228,8 +6228,8 @@
 													<input type="text" name="attr_pb_custom" placeholder="2d10" title="@{pb_custom}">
 												</div>
 												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{global_save_mod_flag}">
-														<input type="checkbox" name="attr_global_save_mod_flag" value="1">
+													<label class="sheet-form-checkbox" title="@{global_resistencia_mod_flag}">
+														<input type="checkbox" name="attr_global_resistencia_mod_flag" value="1">
 														<span>Show Global Save Modifier Field</span>
 													</label>
 												</div>
@@ -6473,42 +6473,42 @@
 										</div>
 									</div>
 								</div>
-								<div class="sheet-container-panel sheet-pc-option-save">
+								<div class="sheet-container-panel sheet-pc-option-resistencia">
 									<div class="sheet-container-header">Saving Throw Options</div>
 									<div class="sheet-container-body">
 										<div class="sheet-form sheet-form-borderless">
 											<div class="sheet-form-body">
 												<div class="sheet-form-group">
 													<label>Potência Save Modifier:</label>
-													<input type="text" name="attr_potencia_save_mod" placeholder="0" title="@{potencia_save_mod}">
+													<input type="text" name="attr_potencia_resistencia_mod" placeholder="0" title="@{potencia_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Agilidade Save Modifier:</label>
-													<input type="text" name="attr_agilidade_save_mod" placeholder="0" title="@{agilidade_save_mod}">
+													<input type="text" name="attr_agilidade_resistencia_mod" placeholder="0" title="@{agilidade_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Vigor Save Modifier:</label>
-													<input type="text" name="attr_vigor_save_mod" placeholder="0" title="@{vigor_save_mod}">
+													<input type="text" name="attr_vigor_resistencia_mod" placeholder="0" title="@{vigor_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Presença Save Modifier:</label>
-													<input type="text" name="attr_presenca_save_mod" placeholder="0" title="@{presenca_save_mod}">
+													<input type="text" name="attr_presenca_resistencia_mod" placeholder="0" title="@{presenca_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Astúcia Save Modifier:</label>
-													<input type="text" name="attr_astucia_save_mod" placeholder="0" title="@{astucia_save_mod}">
+													<input type="text" name="attr_astucia_resistencia_mod" placeholder="0" title="@{astucia_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Vontade Save Modifier:</label>
-													<input type="text" name="attr_vontade_save_mod" placeholder="0" title="@{vontade_save_mod}">
+													<input type="text" name="attr_vontade_resistencia_mod" placeholder="0" title="@{vontade_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Death Save Modifier:</label>
-													<input type="text" name="attr_death_save_mod" placeholder="0" title="@{death_save_mod}">
+													<input type="text" name="attr_death_resistencia_mod" placeholder="0" title="@{death_resistencia_mod}">
 												</div>
 												<div class="sheet-form-group">
 													<label>Global Saving Throw Modifier:</label>
-													<input type="text" name="attr_globalsavemod" placeholder="0" title="@{globalsavemod}">
+													<input type="text" name="attr_globalresistenciamod" placeholder="0" title="@{globalresistenciamod}">
 												</div>
 											</div>
 										</div>
@@ -6697,9 +6697,9 @@
 			<input type="hidden" name="attr_passive_astucia" value="10">
 			<input type="hidden" name="attr_hitdie_final" value="">
 			<input type="hidden" name="attr_globalsavingthrowbonus" value="">
-			<input type="hidden" name="attr_death_save_bonus" value="0">
+			<input type="hidden" name="attr_death_resistencia_bonus" value="0">
 			<input type="hidden" name="attr_initiative_bonus" value="0">
-			<input type="hidden" name="attr_spell_save_dc" value="0">
+			<input type="hidden" name="attr_spell_resistencia_dc" value="0">
 			<input type="hidden" name="attr_spell_attack_bonus" value="0">
 			<input type="hidden" name="attr_spell_attack_mod" value="0">
 			<input type="hidden" name="attr_npc_legendary_actions_desc" value="">
@@ -6707,7 +6707,7 @@
 			<input type="hidden" name="attr_global_damage_mod_roll" value="0">
 			<input type="hidden" name="attr_global_damage_mod_type" value="">
 			<input type="hidden" name="attr_global_attack_mod" value="">
-			<input type="hidden" name="attr_global_save_mod" value="">
+			<input type="hidden" name="attr_global_resistencia_mod" value="">
 			<input type="hidden" name="attr_global_skill_mod" value="">
 			<input type="hidden" name="attr_exhaustion_1" value="">
 			<input type="hidden" name="attr_exhaustion_2" value="">
@@ -6727,12 +6727,12 @@
 			<input type="hidden" name="attr_presenca_mod" value="0">
 			<input type="hidden" name="attr_astucia_mod" value="0">
 			<input type="hidden" name="attr_vontade_mod" value="0">
-			<input type="hidden" name="attr_potencia_save_bonus" value="0">
-			<input type="hidden" name="attr_agilidade_save_bonus" value="0">
-			<input type="hidden" name="attr_vigor_save_bonus" value="0">
-			<input type="hidden" name="attr_presenca_save_bonus" value="0">
-			<input type="hidden" name="attr_astucia_save_bonus" value="0">
-			<input type="hidden" name="attr_vontade_save_bonus" value="0">
+			<input type="hidden" name="attr_potencia_resistencia_bonus" value="0">
+			<input type="hidden" name="attr_agilidade_resistencia_bonus" value="0">
+			<input type="hidden" name="attr_vigor_resistencia_bonus" value="0">
+			<input type="hidden" name="attr_presenca_resistencia_bonus" value="0">
+			<input type="hidden" name="attr_astucia_resistencia_bonus" value="0">
+			<input type="hidden" name="attr_vontade_resistencia_bonus" value="0">
 			<input type="hidden" name="attr_potencia_maximum" value="20">
 			<input type="hidden" name="attr_agilidade_maximum" value="20">
 			<input type="hidden" name="attr_vigor_maximum" value="20">
@@ -6992,21 +6992,21 @@
 							{{/charname}}
 						</div>
 					{{/attack}}
-					{{#save}}
-						<div class="container {{#attack}}desc{{/attack}}{{^attack}}atk{{/attack}} save">
-							<div class="savedc">
-								<span class="rolltemplate-inline">DC</span><span class="rolltemplate-inline">{{savedc}}</span>
+					{{#resistencia}}
+						<div class="container {{#attack}}desc{{/attack}}{{^attack}}atk{{/attack}} resistencia">
+							<div class="resistenciadc">
+								<span class="rolltemplate-inline">DC</span><span class="rolltemplate-inline">{{resistenciadc}}</span>
 							</div>
-							{{#savedesc}}
+							{{#resistenciadesc}}
 								<div class="sublabel">
-									<span>{{savedesc}}</span>
+									<span>{{resistenciadesc}}</span>
 								</div>
-							{{/savedesc}}
+							{{/resistenciadesc}}
 							<div class="label">
-								<span class="rolltemplate-inline">{{saveattr}}</span> <span class="rolltemplate-inline">Save</span>
+								<span class="rolltemplate-inline">{{resistenciaattr}}</span> <span class="rolltemplate-inline">Save</span>
 							</div>
 						</div>
-					{{/save}}
+					{{/resistencia}}
 					{{#desc}}
 						<div class="desc info">
 							<span>
@@ -7215,21 +7215,21 @@
 				</rolltemplate>
 
 				<rolltemplate class="sheet-rolltemplate-dmg">
-					{{#save}}
-						<div class="{{#attack}}desc{{/attack}}{{^attack}}atk{{/attack}} save">
-							<div class="savedc">
-								<span class="rolltemplate-inline">DC</span><span class="rolltemplate-inline">{{savedc}}</span>
+					{{#resistencia}}
+						<div class="{{#attack}}desc{{/attack}}{{^attack}}atk{{/attack}} resistencia">
+							<div class="resistenciadc">
+								<span class="rolltemplate-inline">DC</span><span class="rolltemplate-inline">{{resistenciadc}}</span>
 							</div>
-							{{#savedesc}}
+							{{#resistenciadesc}}
 								<div class="sublabel">
-									<span>{{savedesc}}</span>
+									<span>{{resistenciadesc}}</span>
 								</div>
-							{{/savedesc}}
+							{{/resistenciadesc}}
 							<div class="label">
-								<span class="rolltemplate-inline">{{saveattr}}</span> <span class="rolltemplate-inline">Save</span>
+								<span class="rolltemplate-inline">{{resistenciaattr}}</span> <span class="rolltemplate-inline">Save</span>
 							</div>
 						</div>
-					{{/save}}
+					{{/resistencia}}
 					{{^attack}}
 						{{#desc}}
 							<div class="desc info">
@@ -7811,7 +7811,7 @@
 
 			['potencia', 'agilidade', 'vigor', 'presenca', 'astucia', 'vontade'].forEach(attr => {
 				on(`change:${attr}_mod`, function() {
-					update_save(`${attr}`);
+					update_resistencia(`${attr}`);
 					update_attacks(`${attr}`);
 					update_tool(`${attr}`);
 					update_spell_info(`${attr}`);
@@ -7842,26 +7842,26 @@
 			});
 
 			['potencia', 'agilidade', 'vigor', 'presenca', 'astucia', 'vontade'].forEach(attr => {
-				on(`change:${attr}_save_prof change:${attr}_save_mod`, function(eventinfo) {
+				on(`change:${attr}_resistencia_prof change:${attr}_resistencia_mod`, function(eventinfo) {
 					if (eventinfo.sourceType === "sheetworker") {
 						return;
 					};
-					update_save(`${attr}`);
+					update_resistencia(`${attr}`);
 				});
 			});
 
-			on("change:globalsavemod", function(eventinfo) {
+			on("change:globalresistenciamod", function(eventinfo) {
 				if (eventinfo.sourceType === "sheetworker") {
 					return;
 				};
-				update_all_saves();
+				update_all_resistencias();
 			});
 
-			on("change:death_save_mod", function(eventinfo) {
+			on("change:death_resistencia_mod", function(eventinfo) {
 				if (eventinfo.sourceType === "sheetworker") {
 					return;
 				};
-				update_save("death");
+				update_resistencia("death");
 			});
 
 			['acrobatics', 'animal_handling', 'arcana', 'athletics', 'deception', 'history', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'persuasion', 'religion', 'sleight_of_hand', 'stealth', 'survival'].forEach(attr => {
@@ -7881,20 +7881,20 @@
 				update_tool(tool_id);
 			});
 
-			on("change:repeating_attack:atkname change:repeating_attack:atkflag change:repeating_attack:atkattr_base change:repeating_attack:atkmod change:repeating_attack:atkmagic change:repeating_attack:atkprofflag change:repeating_attack:dmgflag change:repeating_attack:dmgbase change:repeating_attack:dmgattr change:repeating_attack:dmgmod change:repeating_attack:dmgtype change:repeating_attack:dmg2flag change:repeating_attack:dmg2base change:repeating_attack:dmg2attr change:repeating_attack:dmg2mod change:repeating_attack:dmg2type change:repeating_attack:saveflag change:repeating_attack:savedc change:repeating_attack:saveflat change:repeating_attack:dmgcustcrit change:repeating_attack:dmg2custcrit change:repeating_attack:ammo change:repeating_attack:saveattr change:repeating_attack:atkrange", function(eventinfo) {
+			on("change:repeating_attack:atkname change:repeating_attack:atkflag change:repeating_attack:atkattr_base change:repeating_attack:atkmod change:repeating_attack:atkmagic change:repeating_attack:atkprofflag change:repeating_attack:dmgflag change:repeating_attack:dmgbase change:repeating_attack:dmgattr change:repeating_attack:dmgmod change:repeating_attack:dmgtype change:repeating_attack:dmg2flag change:repeating_attack:dmg2base change:repeating_attack:dmg2attr change:repeating_attack:dmg2mod change:repeating_attack:dmg2type change:repeating_attack:resistenciaflag change:repeating_attack:resistenciadc change:repeating_attack:resistenciaflat change:repeating_attack:dmgcustcrit change:repeating_attack:dmg2custcrit change:repeating_attack:ammo change:repeating_attack:resistenciaattr change:repeating_attack:atkrange", function(eventinfo) {
 				if (eventinfo.sourceType === "sheetworker") {
 					return;
 				}
 
 				var source = eventinfo.sourceAttribute.substr(38);
 				var attackid = eventinfo.sourceAttribute.substring(17, 37);
-				if (source == "atkattr_base" || source == "savedc") {
+				if (source == "atkattr_base" || source == "resistenciadc") {
 					getAttrs(["repeating_attack_spellid", "repeating_attack_spelllevel"], function(v) {
 						set = {};
 						if (v.repeating_attack_spellid && v.repeating_attack_spellid != "" && v.repeating_attack_spelllevel && v.repeating_attack_spelllevel != "") {
 							var newVal = eventinfo.newValue == "spell" ? "spell" : _.last(eventinfo.newValue.split("_")[0].split("{"));
 							set["repeating_attack_atkattr_base"] = newVal == "spell" ? "spell" : "@{" + newVal + "_mod}";
-							set["repeating_attack_savedc"] = newVal == "spell" ? "spell" : "(@{" + newVal + "_mod}+8+@{pb})";
+							set["repeating_attack_resistenciadc"] = newVal == "spell" ? "spell" : "(@{" + newVal + "_mod}+8+@{pb})";
 							set["repeating_spell-" + v.repeating_attack_spelllevel + "_" + v.repeating_attack_spellid + "_spell_ability"] = newVal == "spell" ? "spell" : "@{" + newVal + "_mod}+";
 						}
 						setAttrs(set, function() {
@@ -8078,7 +8078,7 @@
 			});
 
 			['spell-cantrip', 'spell-1', 'spell-2', 'spell-3', 'spell-4', 'spell-5', 'spell-6', 'spell-7', 'spell-8', 'spell-9'].forEach(attr => {
-				on(`change:repeating_${attr}:includedesc change:repeating_${attr}:innate change:repeating_${attr}:spell_ability change:repeating_${attr}:spell_updateflag change:repeating_${attr}:spellathigherlevels change:repeating_${attr}:spellattack change:repeating_${attr}:spelldamage change:repeating_${attr}:spelldamage2 change:repeating_${attr}:spelldamagetype change:repeating_${attr}:spelldamagetype2 change:repeating_${attr}:spelldescription change:repeating_${attr}:spelldmgmod change:repeating_${attr}:spellhealing change:repeating_${attr}:spellhlbonus change:repeating_${attr}:spellhldie change:repeating_${attr}:spellhldietype change:repeating_${attr}:spellname change:repeating_${attr}:spellprepared change:repeating_${attr}:spellrange change:repeating_${attr}:spellsave change:repeating_${attr}:spellsavesuccess change:repeating_${attr}:spelltarget change:repeating_${attr}:spell_damage_progression`, (eventinfo) => {
+				on(`change:repeating_${attr}:includedesc change:repeating_${attr}:innate change:repeating_${attr}:spell_ability change:repeating_${attr}:spell_updateflag change:repeating_${attr}:spellathigherlevels change:repeating_${attr}:spellattack change:repeating_${attr}:spelldamage change:repeating_${attr}:spelldamage2 change:repeating_${attr}:spelldamagetype change:repeating_${attr}:spelldamagetype2 change:repeating_${attr}:spelldescription change:repeating_${attr}:spelldmgmod change:repeating_${attr}:spellhealing change:repeating_${attr}:spellhlbonus change:repeating_${attr}:spellhldie change:repeating_${attr}:spellhldietype change:repeating_${attr}:spellname change:repeating_${attr}:spellprepared change:repeating_${attr}:spellrange change:repeating_${attr}:spellresistencia change:repeating_${attr}:spellresistenciasuccess change:repeating_${attr}:spelltarget change:repeating_${attr}:spell_damage_progression`, (eventinfo) => {
 					if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 						return;
 					}
@@ -8159,7 +8159,7 @@
 				});
 			};
 
-			on("change:class change:custom_class change:cust_classname change:cust_hitdietype change:cust_spellcasting_ability change:cust_spellslots change:cust_potencia_save_prof change:cust_agilidade_save_prof change:cust_vigor_save_prof change:cust_presenca_save_prof change:cust_astucia_save_prof change:cust_vontade_save_prof change:subclass change:multiclass1 change:multiclass1_subclass change:multiclass2 change:multiclass2_subclass change:multiclass3 change:multiclass3_subclass", function(eventinfo) {
+			on("change:class change:custom_class change:cust_classname change:cust_hitdietype change:cust_spellcasting_ability change:cust_spellslots change:cust_potencia_resistencia_prof change:cust_agilidade_resistencia_prof change:cust_vigor_resistencia_prof change:cust_presenca_resistencia_prof change:cust_astucia_resistencia_prof change:cust_vontade_resistencia_prof change:subclass change:multiclass1 change:multiclass1_subclass change:multiclass2 change:multiclass2_subclass change:multiclass3 change:multiclass3_subclass", function(eventinfo) {
 				if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 					return;
 				}
@@ -8236,8 +8236,8 @@
 				update_challenge();
 			});
 
-			on("change:npc_potencia_save_base change:npc_agilidade_save_base change:npc_vigor_save_base change:npc_presenca_save_base change:npc_astucia_save_base change:npc_vontade_save_base", function(eventinfo) {
-				update_npc_saves();
+			on("change:npc_potencia_resistencia_base change:npc_agilidade_resistencia_base change:npc_vigor_resistencia_base change:npc_presenca_resistencia_base change:npc_astucia_resistencia_base change:npc_vontade_resistencia_base", function(eventinfo) {
+				update_npc_resistencias();
 			});
 
 			on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
@@ -8266,7 +8266,7 @@
 				});
 			});
 
-			[`ac`, `attack`, 'save', 'skill', ].forEach(attr => {
+			[`ac`, `attack`, 'resistencia', 'skill', ].forEach(attr => {
 				on(`change:global_${attr}_mod_flag`, (eventinfo) => {
 					const mod = (attr === "attack") ? "tohitmod" : `${attr}mod`;
 					if (eventinfo.newValue === "1") {
@@ -8301,8 +8301,8 @@
 				update_globalskills();
 			});
 
-			on("change:repeating_savemod remove:repeating_savemod", function(eventinfo) {
-				update_globalsaves();
+			on("change:repeating_resistenciamod remove:repeating_resistenciamod", function(eventinfo) {
+				update_globalresistencias();
 			});
 
 			on("change:repeating_tohitmod remove:repeating_tohitmod", function(eventinfo) {
@@ -8441,7 +8441,7 @@
 							if ((!v["repeating_inventory_" + currentID + "_equipped"] || v["repeating_inventory_" + currentID + "_equipped"] === "1") && v["repeating_inventory_" + currentID + "_itemmodifiers"] && v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf(attr > -1)) {
 								var mods = v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().split(",");
 								_.each(mods, function(mod) {
-									if (mod.indexOf(attr) > -1 && mod.indexOf("save") === -1) {
+									if (mod.indexOf(attr) > -1 && mod.indexOf("resistencia") === -1) {
 										if (mod.indexOf(":") > -1) {
 											var new_base = !isNaN(parseInt(mod.replace(/[^0-9]/g, ""), 10)) ? parseInt(mod.replace(/[^0-9]/g, ""), 10) : false;
 											item_base = new_base && new_base > item_base ? new_base : item_base;
@@ -8476,26 +8476,26 @@
 				});
 			};
 
-			var update_save = function(attr) {
-				var save_attrs = [attr + "_mod", attr + "_save_prof", attr + "_save_mod", "pb", "globalsavemod", "pb_type"];
+			var update_resistencia = function(attr) {
+				var resistencia_attrs = [attr + "_mod", attr + "_resistencia_prof", attr + "_resistencia_mod", "pb", "globalresistenciamod", "pb_type"];
 				getSectionIDs("repeating_inventory", function(idarray) {
 					_.each(idarray, function(currentID, i) {
-						save_attrs.push("repeating_inventory_" + currentID + "_equipped");
-						save_attrs.push("repeating_inventory_" + currentID + "_itemmodifiers");
+						resistencia_attrs.push("repeating_inventory_" + currentID + "_equipped");
+						resistencia_attrs.push("repeating_inventory_" + currentID + "_itemmodifiers");
 					});
 
-					getAttrs(save_attrs, function(v) {
+					getAttrs(resistencia_attrs, function(v) {
 						var attr_mod = v[attr + "_mod"] ? parseInt(v[attr + "_mod"], 10) : 0;
-						var prof = v[attr + "_save_prof"] && v[attr + "_save_prof"] != 0 && !isNaN(v["pb"]) ? parseInt(v["pb"], 10) : 0;
-						var save_mod = v[attr + "_save_mod"] && !isNaN(parseInt(v[attr + "_save_mod"], 10)) ? parseInt(v[attr + "_save_mod"], 10) : 0;
-						var global = v["globalsavemod"] && !isNaN(v["globalsavemod"]) ? parseInt(v["globalsavemod"], 10) : 0;
+						var prof = v[attr + "_resistencia_prof"] && v[attr + "_resistencia_prof"] != 0 && !isNaN(v["pb"]) ? parseInt(v["pb"], 10) : 0;
+						var resistencia_mod = v[attr + "_resistencia_mod"] && !isNaN(parseInt(v[attr + "_resistencia_mod"], 10)) ? parseInt(v[attr + "_resistencia_mod"], 10) : 0;
+						var global = v["globalresistenciamod"] && !isNaN(v["globalresistenciamod"]) ? parseInt(v["globalresistenciamod"], 10) : 0;
 						var items = 0;
 						_.each(idarray, function(currentID) {
-							if (v["repeating_inventory_" + currentID + "_equipped"] && v["repeating_inventory_" + currentID + "_equipped"] === "1" && v["repeating_inventory_" + currentID + "_itemmodifiers"] && (v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf("testes de resistência") > -1 || v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf(attr + " save") > -1)) {
+							if (v["repeating_inventory_" + currentID + "_equipped"] && v["repeating_inventory_" + currentID + "_equipped"] === "1" && v["repeating_inventory_" + currentID + "_itemmodifiers"] && (v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf("testes de resistência") > -1 || v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().indexOf(attr + " resistencia") > -1)) {
 								var mods = v["repeating_inventory_" + currentID + "_itemmodifiers"].toLowerCase().split(",");
 								_.each(mods, function(mod) {
-									if (mod.indexOf(attr + " save") > -1) {
-										var substr = mod.slice(mod.lastIndexOf(attr + " save") + attr.length + " save".length);
+									if (mod.indexOf(attr + " resistencia") > -1) {
+										var substr = mod.slice(mod.lastIndexOf(attr + " resistencia") + attr.length + " resistencia".length);
 										var bonus = substr && substr.length > 0 && !isNaN(parseInt(substr, 10)) ? parseInt(substr, 10) : 0;
 									} else if (mod.indexOf("testes de resistência") > -1) {
 										var substr = mod.slice(mod.lastIndexOf("testes de resistência") + "testes de resistência".length);
@@ -8507,12 +8507,12 @@
 								});
 							}
 						});
-						var total = attr_mod + prof + save_mod + global + items;
-						if (v["pb_type"] && v["pb_type"] === "die" && v[attr + "_save_prof"] != 0 && attr != "death") {
+						var total = attr_mod + prof + resistencia_mod + global + items;
+						if (v["pb_type"] && v["pb_type"] === "die" && v[attr + "_resistencia_prof"] != 0 && attr != "death") {
 							total = total + "+" + v["pb"];
 						};
 						var update = {};
-						update[attr + "_save_bonus"] = total;
+						update[attr + "_resistencia_bonus"] = total;
 						setAttrs(update, {
 							silent: true
 						});
@@ -8520,14 +8520,14 @@
 				});
 			};
 
-			var update_all_saves = function() {
-				update_save("potencia");
-				update_save("agilidade");
-				update_save("vigor");
-				update_save("presenca");
-				update_save("astucia");
-				update_save("vontade");
-				update_save("death");
+			var update_all_resistencias = function() {
+				update_resistencia("potencia");
+				update_resistencia("agilidade");
+				update_resistencia("vigor");
+				update_resistencia("presenca");
+				update_resistencia("astucia");
+				update_resistencia("vontade");
+				update_resistencia("death");
 			};
 
 			var update_all_ability_checks = function() {
@@ -8763,8 +8763,8 @@
 						list: ["spellname", "spellattackid", "spellsource", "spellattackid"]
 					},
 					{
-						name: "savemod",
-						list: ["global_save_name"]
+						name: "resistenciamod",
+						list: ["global_resistencia_name"]
 					},
 					{
 						name: "tohitmod",
@@ -9252,10 +9252,10 @@
 						update["repeating_spell-" + lvl + "_" + id + "_spelldmgmod"] = page.data["Add Casting Modifier"]
 					};
 					if (page.data["Save"]) {
-						update["repeating_spell-" + lvl + "_" + id + "_spellsave"] = page.data["Save"]
+						update["repeating_spell-" + lvl + "_" + id + "_spellresistencia"] = page.data["Save"]
 					};
 					if (page.data["Save Success"]) {
-						update["repeating_spell-" + lvl + "_" + id + "_spellsavesuccess"] = page.data["Save Success"]
+						update["repeating_spell-" + lvl + "_" + id + "_spellresistenciasuccess"] = page.data["Save Success"]
 					};
 					if (page.data["Higher Spell Slot Dice"]) {
 						update["repeating_spell-" + lvl + "_" + id + "_spellhldie"] = page.data["Higher Spell Slot Dice"]
@@ -9382,20 +9382,20 @@
 					}
 					update["npc_senses"] = senses;
 
-					update["npc_potencia_save_base"] = "";
-					update["npc_agilidade_save_base"] = "";
-					update["npc_vigor_save_base"] = "";
-					update["npc_presenca_save_base"] = "";
-					update["npc_astucia_save_base"] = "";
-					update["npc_vontade_save_base"] = "";
+					update["npc_potencia_resistencia_base"] = "";
+					update["npc_agilidade_resistencia_base"] = "";
+					update["npc_vigor_resistencia_base"] = "";
+					update["npc_presenca_resistencia_base"] = "";
+					update["npc_astucia_resistencia_base"] = "";
+					update["npc_vontade_resistencia_base"] = "";
 					if (page.data["Saving Throws"] && page.data["Saving Throws"] != "") {
-						var savearray = page.data["Saving Throws"].split(", ");
-						_.each(savearray, function(save) {
-							kv = save.indexOf("-") > -1 ? save.split(" ") : save.split(" +");
-							update["npc_" + kv[0].toLowerCase() + "_save_base"] = parseInt(kv[1], 10);
+						var resistenciaarray = page.data["Saving Throws"].split(", ");
+						_.each(resistenciaarray, function(resistencia) {
+							kv = resistencia.indexOf("-") > -1 ? resistencia.split(" ") : resistencia.split(" +");
+							update["npc_" + kv[0].toLowerCase() + "_resistencia_base"] = parseInt(kv[1], 10);
 						});
 						callbacks.push(function() {
-							update_npc_saves();
+							update_npc_resistencias();
 						});
 					};
 
@@ -9861,9 +9861,9 @@
 						}
 					}
 					if (page.data["data-Saving Throws"] && !page.data.multiclass) {
-						var saves = jsonparse(page.data["data-Saving Throws"]);
-						_.each(saves, function(value) {
-							update[value.toLowerCase() + "_save_prof"] = "(@{pb})";
+						var resistencias = jsonparse(page.data["data-Saving Throws"]);
+						_.each(resistencias, function(value) {
+							update[value.toLowerCase() + "_resistencia_prof"] = "(@{pb})";
 						});
 					}
 
@@ -10079,7 +10079,7 @@
 								if (action["Type"] == "Spell") {
 									update["repeating_attack_" + newrowid + "_atkflag"] = "0";
 									update["repeating_attack_" + newrowid + "_attack_options"] = "";
-									update["repeating_attack_" + newrowid + "_saveflag"] = "{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}"
+									update["repeating_attack_" + newrowid + "_resistenciaflag"] = "{{resistencia=1}} {{resistenciaattr=@{resistenciaattr}}} {{resistenciadesc=@{resistenciaeffect}}} {{resistenciadc=[[[[@{resistenciadc}]][SAVE]]]}}"
 								} else {
 									update["repeating_attack_" + newrowid + "_attack_flag"] = "on";
 									update["repeating_attack_" + newrowid + "_atkflag"] = "{{attack=1}}";
@@ -10102,13 +10102,13 @@
 									update["repeating_attack_" + newrowid + "_dmgattr"] = "0";
 								}
 								if (action["Save"]) {
-									update["repeating_attack_" + newrowid + "_saveattr"] = action["Save"]
+									update["repeating_attack_" + newrowid + "_resistenciaattr"] = action["Save"]
 								}
 								if (action["Save DC"]) {
-									update["repeating_attack_" + newrowid + "_savedc"] = "(" + modStringToAttrib(action["Save DC"]) + "+8+@{pb})"
+									update["repeating_attack_" + newrowid + "_resistenciadc"] = "(" + modStringToAttrib(action["Save DC"]) + "+8+@{pb})"
 								}
 								if (action["Save Effect"]) {
-									update["repeating_attack_" + newrowid + "_saveeffect"] = action["Save Effect"]
+									update["repeating_attack_" + newrowid + "_resistenciaeffect"] = action["Save Effect"]
 								}
 
 								if (action["Damage 2"] && action["Damage 2 Type"]) {
@@ -10205,16 +10205,16 @@
 						update["global_ac_mod_flag"] = "1";
 					};
 					if (blob["Global Save"]) {
-						var globalsave = jsonparse(blob["Global Save Mod"]);
+						var globalresistencia = jsonparse(blob["Global Save Mod"]);
 						var id = generateRowID();
-						_.each(repeating.savemod, function(name, rowid) {
-							if (name.toLowerCase() === globalsave["Name"].toLowerCase()) id = rowid;
+						_.each(repeating.resistenciamod, function(name, rowid) {
+							if (name.toLowerCase() === globalresistencia["Name"].toLowerCase()) id = rowid;
 						});
-						update["repeating_savemod_" + id + "_global_save_roll"] = globalsave.Bonus;
-						if (globalsave["Active"] !== "false") update["repeating_savemod_" + id + "_global_save_active_flag"] = "1";
-						update["repeating_savemod_" + id + "_options-flag"] = "0";
-						update["repeating_savemod_" + id + "_global_save_name"] = globalsave.Name;
-						update["global_save_mod_flag"] = "1";
+						update["repeating_resistenciamod_" + id + "_global_resistencia_roll"] = globalresistencia.Bonus;
+						if (globalresistencia["Active"] !== "false") update["repeating_resistenciamod_" + id + "_global_resistencia_active_flag"] = "1";
+						update["repeating_resistenciamod_" + id + "_options-flag"] = "0";
+						update["repeating_resistenciamod_" + id + "_global_resistencia_name"] = globalresistencia.Name;
+						update["global_resistencia_mod_flag"] = "1";
 					}
 					if (blob["Global Attack"]) {
 						var globalattack = jsonparse(blob["Global Attack"]);
@@ -10252,9 +10252,9 @@
 						update["jack_of_all_trades"] = "@{jack}";
 					};
 					if (blob["Saving Throws"]) {
-						var saves = jsonparse(blob["Saving Throws"]);
-						_.each(saves, function(value) {
-							update[value.toLowerCase() + "_save_prof"] = "(@{pb})";
+						var resistencias = jsonparse(blob["Saving Throws"]);
+						_.each(resistencias, function(value) {
+							update[value.toLowerCase() + "_resistencia_prof"] = "(@{pb})";
 						});
 					};
 					if (blob["Custom Spells"]) {
@@ -10352,10 +10352,10 @@
 								update["repeating_spell-" + lvl + "_" + id + "_spelldmgmod"] = spell["Add Casting Modifier"]
 							};
 							if (spell["Save"]) {
-								update["repeating_spell-" + lvl + "_" + id + "_spellsave"] = spell["Save"]
+								update["repeating_spell-" + lvl + "_" + id + "_spellresistencia"] = spell["Save"]
 							};
 							if (spell["Save Success"]) {
-								update["repeating_spell-" + lvl + "_" + id + "_spellsavesuccess"] = spell["Save Success"]
+								update["repeating_spell-" + lvl + "_" + id + "_spellresistenciasuccess"] = spell["Save Success"]
 							};
 							if (spell["Higher Spell Slot Dice"]) {
 								update["repeating_spell-" + lvl + "_" + id + "_spellhldie"] = spell["Higher Spell Slot Dice"]
@@ -10379,7 +10379,7 @@
 						})
 					};
 					if (blob["Global Save Mod"]) {
-						update["globalsavemod"] = numUses(blob["Global Save Mod"]);
+						update["globalresistenciamod"] = numUses(blob["Global Save Mod"]);
 					};
 					if (blob["Proficiency Bonus"]) {
 						var bonus = jsonparse(blob["Proficiency Bonus"]);
@@ -10411,35 +10411,35 @@
 						update_spell_info();
 					};
 					if (mod.indexOf("testes de resistência") > -1) {
-						update_all_saves();
+						update_all_resistencias();
 					};
-					if (mod.indexOf("potencia save") > -1) {
-						update_save("potencia");
+					if (mod.indexOf("potencia resistencia") > -1) {
+						update_resistencia("potencia");
 					} else if (mod.indexOf("potencia") > -1) {
 						update_attr("potencia");
 					};
-					if (mod.indexOf("agilidade save") > -1) {
-						update_save("agilidade");
+					if (mod.indexOf("agilidade resistencia") > -1) {
+						update_resistencia("agilidade");
 					} else if (mod.indexOf("agilidade") > -1) {
 						update_attr("agilidade");
 					};
-					if (mod.indexOf("vigor save") > -1) {
-						update_save("vigor");
+					if (mod.indexOf("vigor resistencia") > -1) {
+						update_resistencia("vigor");
 					} else if (mod.indexOf("vigor") > -1) {
 						update_attr("vigor");
 					};
-					if (mod.indexOf("presenca save") > -1) {
-						update_save("presenca");
+					if (mod.indexOf("presenca resistencia") > -1) {
+						update_resistencia("presenca");
 					} else if (mod.indexOf("presenca") > -1) {
 						update_attr("presenca");
 					};
-					if (mod.indexOf("astucia save") > -1) {
-						update_save("astucia");
+					if (mod.indexOf("astucia resistencia") > -1) {
+						update_resistencia("astucia");
 					} else if (mod.indexOf("astucia") > -1) {
 						update_attr("astucia");
 					};
-					if (mod.indexOf("vontade save") > -1) {
-						update_save("vontade");
+					if (mod.indexOf("vontade resistencia") > -1) {
+						update_resistencia("vontade");
 					} else if (mod.indexOf("vontade") > -1) {
 						update_attr("vontade");
 					};
@@ -10761,8 +10761,8 @@
 					"repeating_spell-" + lvl + "_" + spellid + "_spelldamagetype2",
 					"repeating_spell-" + lvl + "_" + spellid + "_spellhealing",
 					"repeating_spell-" + lvl + "_" + spellid + "_spelldmgmod",
-					"repeating_spell-" + lvl + "_" + spellid + "_spellsave",
-					"repeating_spell-" + lvl + "_" + spellid + "_spellsavesuccess",
+					"repeating_spell-" + lvl + "_" + spellid + "_spellresistencia",
+					"repeating_spell-" + lvl + "_" + spellid + "_spellresistenciasuccess",
 					"repeating_spell-" + lvl + "_" + spellid + "_spellhldie",
 					"repeating_spell-" + lvl + "_" + spellid + "_spellhldietype",
 					"repeating_spell-" + lvl + "_" + spellid + "_spellhlbonus",
@@ -10787,9 +10787,9 @@
 					}
 
 					if (v["repeating_spell-" + lvl + "_" + spellid + "_spell_ability"] == "spell") {
-						update["repeating_attack_" + attackid + "_savedc"] = "(@{spell_save_dc})";
+						update["repeating_attack_" + attackid + "_resistenciadc"] = "(@{spell_resistencia_dc})";
 					} else if (v["repeating_spell-" + lvl + "_" + spellid + "_spell_ability"]) {
-						update["repeating_attack_" + attackid + "_savedc"] = "(" + spellAbility + "+8+@{spell_dc_mod}+@{pb})";
+						update["repeating_attack_" + attackid + "_resistenciadc"] = "(" + spellAbility + "+8+@{spell_dc_mod}+@{pb})";
 					}
 
 					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellname"] && v["repeating_spell-" + lvl + "_" + spellid + "_spellname"] != "") {
@@ -10846,16 +10846,16 @@
 					} else {
 						update["repeating_attack_" + attackid + "_atkrange"] = "";
 					}
-					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellsave"]) {
-						update["repeating_attack_" + attackid + "_saveflag"] = "{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}";
-						update["repeating_attack_" + attackid + "_saveattr"] = v["repeating_spell-" + lvl + "_" + spellid + "_spellsave"];
+					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellresistencia"]) {
+						update["repeating_attack_" + attackid + "_resistenciaflag"] = "{{resistencia=1}} {{resistenciaattr=@{resistenciaattr}}} {{resistenciadesc=@{resistenciaeffect}}} {{resistenciadc=[[[[@{resistenciadc}]][SAVE]]]}}";
+						update["repeating_attack_" + attackid + "_resistenciaattr"] = v["repeating_spell-" + lvl + "_" + spellid + "_spellresistencia"];
 					} else {
-						update["repeating_attack_" + attackid + "_saveflag"] = "0";
+						update["repeating_attack_" + attackid + "_resistenciaflag"] = "0";
 					}
-					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellsavesuccess"]) {
-						update["repeating_attack_" + attackid + "_saveeffect"] = v["repeating_spell-" + lvl + "_" + spellid + "_spellsavesuccess"];
+					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellresistenciasuccess"]) {
+						update["repeating_attack_" + attackid + "_resistenciaeffect"] = v["repeating_spell-" + lvl + "_" + spellid + "_spellresistenciasuccess"];
 					} else {
-						update["repeating_attack_" + attackid + "_saveeffect"] = "";
+						update["repeating_attack_" + attackid + "_resistenciaeffect"] = "";
 					}
 					if (v["repeating_spell-" + lvl + "_" + spellid + "_spellhldie"] && v["repeating_spell-" + lvl + "_" + spellid + "_spellhldie"] != "" && v["repeating_spell-" + lvl + "_" + spellid + "_spellhldietype"] && v["repeating_spell-" + lvl + "_" + spellid + "_spellhldietype"] != "") {
 						var bonus = "";
@@ -10945,12 +10945,12 @@
 								attack_attribs.push("repeating_attack_" + id + "_atkattr_base");
 								attack_attribs.push("repeating_attack_" + id + "_dmgattr");
 								attack_attribs.push("repeating_attack_" + id + "_dmg2attr");
-								attack_attribs.push("repeating_attack_" + id + "_savedc");
+								attack_attribs.push("repeating_attack_" + id + "_resistenciadc");
 							});
 							getAttrs(attack_attribs, function(v) {
 								var attr_attack_ids = [];
 								_.each(idarray, function(id) {
-									if ((v["repeating_attack_" + id + "_atkattr_base"] && v["repeating_attack_" + id + "_atkattr_base"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmgattr"] && v["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmg2attr"] && v["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"] === "(@{spell_save_dc})" && v["spellcasting_ability"] && v["spellcasting_ability"].indexOf(update_id) > -1)) {
+									if ((v["repeating_attack_" + id + "_atkattr_base"] && v["repeating_attack_" + id + "_atkattr_base"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmgattr"] && v["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmg2attr"] && v["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_resistenciadc"] && v["repeating_attack_" + id + "_resistenciadc"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_resistenciadc"] && v["repeating_attack_" + id + "_resistenciadc"] === "(@{spell_resistencia_dc})" && v["spellcasting_ability"] && v["spellcasting_ability"].indexOf(update_id) > -1)) {
 										attr_attack_ids.push(id);
 									}
 								});
@@ -10964,7 +10964,7 @@
 			};
 
 			var do_update_attack = function(attack_array, source) {
-				var attack_attribs = ["level", "d20", "pb", "pb_type", "pbd_safe", "dtype", "globalmagicmod", "potencia_mod", "agilidade_mod", "vigor_mod", "presenca_mod", "astucia_mod", "vontade_mod", "spellcasting_ability", "spell_save_dc", "spell_attack_mod", "spell_dc_mod", "global_damage_mod_roll", "global_damage_mod_crit"];
+				var attack_attribs = ["level", "d20", "pb", "pb_type", "pbd_safe", "dtype", "globalmagicmod", "potencia_mod", "agilidade_mod", "vigor_mod", "presenca_mod", "astucia_mod", "vontade_mod", "spellcasting_ability", "spell_resistencia_dc", "spell_attack_mod", "spell_dc_mod", "global_damage_mod_roll", "global_damage_mod_crit"];
 				_.each(attack_array, function(attackid) {
 					attack_attribs.push("repeating_attack_" + attackid + "_atkflag");
 					attack_attribs.push("repeating_attack_" + attackid + "_atkname");
@@ -10984,10 +10984,10 @@
 					attack_attribs.push("repeating_attack_" + attackid + "_dmg2type");
 					attack_attribs.push("repeating_attack_" + attackid + "_dmgcustcrit");
 					attack_attribs.push("repeating_attack_" + attackid + "_dmg2custcrit");
-					attack_attribs.push("repeating_attack_" + attackid + "_saveflag");
-					attack_attribs.push("repeating_attack_" + attackid + "_savedc");
-					attack_attribs.push("repeating_attack_" + attackid + "_saveeffect");
-					attack_attribs.push("repeating_attack_" + attackid + "_saveflat");
+					attack_attribs.push("repeating_attack_" + attackid + "_resistenciaflag");
+					attack_attribs.push("repeating_attack_" + attackid + "_resistenciadc");
+					attack_attribs.push("repeating_attack_" + attackid + "_resistenciaeffect");
+					attack_attribs.push("repeating_attack_" + attackid + "_resistenciaflat");
 					attack_attribs.push("repeating_attack_" + attackid + "_hldmg");
 					attack_attribs.push("repeating_attack_" + attackid + "_spellid");
 					attack_attribs.push("repeating_attack_" + attackid + "_spelllevel");
@@ -11009,7 +11009,7 @@
 						var rollbase = "";
 						var spellattack = false;
 						var magicattackmod = 0;
-						var magicsavemod = 0;
+						var magicresistenciamod = 0;
 						var atkattr_abrev = "";
 						var dmgattr_abrev = "";
 						var dmg2attr_abrev = "";
@@ -11019,7 +11019,7 @@
 						if (v["repeating_attack_" + attackid + "_spellid"] && v["repeating_attack_" + attackid + "_spellid"] != "") {
 							spellattack = true;
 							magicattackmod = v["spell_attack_mod"] && !isNaN(parseInt(v["spell_attack_mod"], 10)) ? parseInt(v["spell_attack_mod"], 10) : 0;
-							magicsavemod = v["spell_dc_mod"] && !isNaN(parseInt(v["spell_dc_mod"], 10)) ? parseInt(v["spell_dc_mod"], 10) : 0;
+							magicresistenciamod = v["spell_dc_mod"] && !isNaN(parseInt(v["spell_dc_mod"], 10)) ? parseInt(v["spell_dc_mod"], 10) : 0;
 						};
 
 						if (!v["repeating_attack_" + attackid + "_atkattr_base"] || v["repeating_attack_" + attackid + "_atkattr_base"] === "0") {
@@ -11072,16 +11072,16 @@
 								plus_minus = bonus_mod > -1 ? "+" : "";
 								bonus = plus_minus + bonus_mod;
 							};
-						} else if (v["repeating_attack_" + attackid + "_saveflag"] && v["repeating_attack_" + attackid + "_saveflag"] != 0) {
-							if (!v["repeating_attack_" + attackid + "_savedc"] || (v["repeating_attack_" + attackid + "_savedc"] && v["repeating_attack_" + attackid + "_savedc"] === "(@{spell_save_dc})")) {
-								var tempdc = v["spell_save_dc"];
-							} else if (v["repeating_attack_" + attackid + "_savedc"] && v["repeating_attack_" + attackid + "_savedc"] === "(@{saveflat})") {
-								var tempdc = isNaN(parseInt(v["repeating_attack_" + attackid + "_saveflat"])) === false ? parseInt(v["repeating_attack_" + attackid + "_saveflat"]) : "0";
+						} else if (v["repeating_attack_" + attackid + "_resistenciaflag"] && v["repeating_attack_" + attackid + "_resistenciaflag"] != 0) {
+							if (!v["repeating_attack_" + attackid + "_resistenciadc"] || (v["repeating_attack_" + attackid + "_resistenciadc"] && v["repeating_attack_" + attackid + "_resistenciadc"] === "(@{spell_resistencia_dc})")) {
+								var tempdc = v["spell_resistencia_dc"];
+							} else if (v["repeating_attack_" + attackid + "_resistenciadc"] && v["repeating_attack_" + attackid + "_resistenciadc"] === "(@{resistenciaflat})") {
+								var tempdc = isNaN(parseInt(v["repeating_attack_" + attackid + "_resistenciaflat"])) === false ? parseInt(v["repeating_attack_" + attackid + "_resistenciaflat"]) : "0";
 							} else {
-								var savedcattr = v["repeating_attack_" + attackid + "_savedc"].replace(/^[^{]*{/, "").replace(/\_.*$/, "");
+								var resistenciadcattr = v["repeating_attack_" + attackid + "_resistenciadc"].replace(/^[^{]*{/, "").replace(/\_.*$/, "");
 								var safe_pb = v["pb_type"] && v["pb_type"] === "die" ? parseInt(pb.substring(1), 10) / 2 : parseInt(pb, 10);
-								var safe_attr = v[savedcattr + "_mod"] ? parseInt(v[savedcattr + "_mod"], 10) : 0;
-								var tempdc = 8 + safe_attr + safe_pb + magicsavemod;
+								var safe_attr = v[resistenciadcattr + "_mod"] ? parseInt(v[resistenciadcattr + "_mod"], 10) : 0;
+								var tempdc = 8 + safe_attr + safe_pb + magicresistenciamod;
 							};
 							bonus = "DC" + tempdc;
 						} else {
@@ -11184,19 +11184,19 @@
 						var globaldamagecrit = `[[${v.global_damage_mod_crit && v.global_damage_mod_crit !== "" ? v.global_damage_mod_crit : "0"}]]`;
 						if (v.dtype === "full") {
 							pickbase = "full";
-							rollbase = "@{wtype}&{template:atkdmg} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[" + r1 + "cs>@{atkcritrange}" + hbonus + "]]}} " + r2 + "cs>@{atkcritrange}" + hbonus + "]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} {{crit1=[[" + crit1 + "[CRIT]]]}} {{crit2=[[" + crit2 + "[CRIT]]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} " + hldmgcrit + " {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globalattack=@{global_attack_mod}}} {{globaldamage=" + globaldamage + "}} {{globaldamagecrit=" + globaldamagecrit + "}} {{globaldamagetype=@{global_damage_mod_type}}} ammo=@{ammo} @{charname_output}";
+							rollbase = "@{wtype}&{template:atkdmg} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[" + r1 + "cs>@{atkcritrange}" + hbonus + "]]}} " + r2 + "cs>@{atkcritrange}" + hbonus + "]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} {{crit1=[[" + crit1 + "[CRIT]]]}} {{crit2=[[" + crit2 + "[CRIT]]]}} @{resistenciaflag} {{desc=@{atk_desc}}} @{hldmg} " + hldmgcrit + " {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globalattack=@{global_attack_mod}}} {{globaldamage=" + globaldamage + "}} {{globaldamagecrit=" + globaldamagecrit + "}} {{globaldamagetype=@{global_damage_mod_type}}} ammo=@{ammo} @{charname_output}";
 						} else if (v["repeating_attack_" + attackid + "_atkflag"] && v["repeating_attack_" + attackid + "_atkflag"] != 0) {
 							pickbase = "pick";
 							rollbase = "@{wtype}&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[" + r1 + "cs>@{atkcritrange}" + hbonus + "]]}} " + r2 + "cs>@{atkcritrange}" + hbonus + "]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globalattack=@{global_attack_mod}}} ammo=@{ammo} @{charname_output}";
 						} else if (v["repeating_attack_" + attackid + "_dmgflag"] && v["repeating_attack_" + attackid + "_dmgflag"] != 0) {
 							pickbase = "dmg";
-							rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagetype=@{global_damage_mod_type}}} ammo=@{ammo} @{charname_output}"
+							rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} @{resistenciaflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagetype=@{global_damage_mod_type}}} ammo=@{ammo} @{charname_output}"
 						} else {
 							pickbase = "empty";
-							rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{saveflag} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} ammo=@{ammo} @{charname_output}"
+							rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{resistenciaflag} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} ammo=@{ammo} @{charname_output}"
 						}
-						update["repeating_attack_" + attackid + "_rollbase_dmg"] = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}";
-						update["repeating_attack_" + attackid + "_rollbase_crit"] = "@{wtype}&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} {{crit1=[[" + crit1 + "]]}} {{crit2=[[" + crit2 + "]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} " + hldmgcrit + " {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagecrit=" + globaldamagecrit + "}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}"
+						update["repeating_attack_" + attackid + "_rollbase_dmg"] = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} @{resistenciaflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}";
+						update["repeating_attack_" + attackid + "_rollbase_crit"] = "@{wtype}&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[" + hdmg1 + "]]}} {{dmg1type=" + dmgtype + "}} @{dmg2flag} {{dmg2=[[" + hdmg2 + "]]}} {{dmg2type=" + dmg2type + "}} {{crit1=[[" + crit1 + "]]}} {{crit2=[[" + crit2 + "]]}} @{resistenciaflag} {{desc=@{atk_desc}}} @{hldmg} " + hldmgcrit + " {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=" + globaldamage + "}} {{globaldamagecrit=" + globaldamagecrit + "}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}"
 						update["repeating_attack_" + attackid + "_atkbonus"] = bonus;
 						update["repeating_attack_" + attackid + "_atkdmgtype"] = dmg + dmgspacer + dmg2 + dmgmag + " ";
 						update["repeating_attack_" + attackid + "_rollbase"] = rollbase;
@@ -11226,7 +11226,7 @@
 
 			var update_spell_from_attack = function(lvl, spellid, attackid) {
 				var update = {};
-				getAttrs(["repeating_attack_" + attackid + "_atkname", "repeating_attack_" + attackid + "_atkrange", "repeating_attack_" + attackid + "_atkflag", "repeating_attack_" + attackid + "_atkattr_base", "repeating_attack_" + attackid + "_dmgbase", "repeating_attack_" + attackid + "_dmgtype", "repeating_attack_" + attackid + "_dmg2base", "repeating_attack_" + attackid + "_dmg2type", "repeating_attack_" + attackid + "_saveflag", "repeating_attack_" + attackid + "_saveattr", "repeating_attack_" + attackid + "_saveeffect"], function(v) {
+				getAttrs(["repeating_attack_" + attackid + "_atkname", "repeating_attack_" + attackid + "_atkrange", "repeating_attack_" + attackid + "_atkflag", "repeating_attack_" + attackid + "_atkattr_base", "repeating_attack_" + attackid + "_dmgbase", "repeating_attack_" + attackid + "_dmgtype", "repeating_attack_" + attackid + "_dmg2base", "repeating_attack_" + attackid + "_dmg2type", "repeating_attack_" + attackid + "_resistenciaflag", "repeating_attack_" + attackid + "_resistenciaattr", "repeating_attack_" + attackid + "_resistenciaeffect"], function(v) {
 					update["repeating_spell-" + lvl + "_" + spellid + "_spellname"] = v["repeating_attack_" + attackid + "_atkname"];
 					if (v["repeating_attack_" + attackid + "_atkrange"] && v["repeating_attack_" + attackid + "_atkrange"] != "") {
 						update["repeating_spell-" + lvl + "_" + spellid + "_spellrange"] = v["repeating_attack_" + attackid + "_atkrange"];
@@ -11267,15 +11267,15 @@
 						}
 					};
 
-					if (v["repeating_attack_" + attackid + "_saveflag"] && v["repeating_attack_" + attackid + "_saveflag"] != "0") {
-						update["repeating_spell-" + lvl + "_" + spellid + "_spellsave"] = v["repeating_attack_" + attackid + "_saveattr"];
+					if (v["repeating_attack_" + attackid + "_resistenciaflag"] && v["repeating_attack_" + attackid + "_resistenciaflag"] != "0") {
+						update["repeating_spell-" + lvl + "_" + spellid + "_spellresistencia"] = v["repeating_attack_" + attackid + "_resistenciaattr"];
 					} else {
-						update["repeating_spell-" + lvl + "_" + spellid + "_spellsave"] = "";
+						update["repeating_spell-" + lvl + "_" + spellid + "_spellresistencia"] = "";
 					};
-					if (v["repeating_attack_" + attackid + "_saveeffect"] && v["repeating_attack_" + attackid + "_saveeffect"] != "") {
-						update["repeating_spell-" + lvl + "_" + spellid + "_spellsavesuccess"] = v["repeating_attack_" + attackid + "_saveeffect"];
+					if (v["repeating_attack_" + attackid + "_resistenciaeffect"] && v["repeating_attack_" + attackid + "_resistenciaeffect"] != "") {
+						update["repeating_spell-" + lvl + "_" + spellid + "_spellresistenciasuccess"] = v["repeating_attack_" + attackid + "_resistenciaeffect"];
 					} else {
-						update["repeating_spell-" + lvl + "_" + spellid + "_spellsavesuccess"] = "";
+						update["repeating_spell-" + lvl + "_" + spellid + "_spellresistenciasuccess"] = "";
 					};
 					setAttrs(update, {
 						silent: true
@@ -11846,7 +11846,7 @@
 			};
 
 			var update_class = function() {
-				getAttrs(["class", "base_level", "custom_class", "cust_classname", "cust_hitdietype", "cust_spellcasting_ability", "cust_potencia_save_prof", "cust_agilidade_save_prof", "cust_vigor_save_prof", "cust_presenca_save_prof", "cust_astucia_save_prof", "cust_vontade_save_prof", "potencia_save_prof", "agilidade_save_prof", "vigor_save_prof", "presenca_save_prof", "astucia_save_prof", "vontade_save_prof", "subclass", "multiclass1", "multiclass1_subclass", "multiclass2", "multiclass2_subclass", "multiclass3", "multiclass3_subclass", "npc"], function(v) {
+				getAttrs(["class", "base_level", "custom_class", "cust_classname", "cust_hitdietype", "cust_spellcasting_ability", "cust_potencia_resistencia_prof", "cust_agilidade_resistencia_prof", "cust_vigor_resistencia_prof", "cust_presenca_resistencia_prof", "cust_astucia_resistencia_prof", "cust_vontade_resistencia_prof", "potencia_resistencia_prof", "agilidade_resistencia_prof", "vigor_resistencia_prof", "presenca_resistencia_prof", "astucia_resistencia_prof", "vontade_resistencia_prof", "subclass", "multiclass1", "multiclass1_subclass", "multiclass2", "multiclass2_subclass", "multiclass3", "multiclass3_subclass", "npc"], function(v) {
 					if (v.npc && v.npc == "1") {
 						return;
 					}
@@ -11854,12 +11854,12 @@
 						setAttrs({
 							hitdietype: v.cust_hitdietype,
 							spellcasting_ability: v.cust_spellcasting_ability,
-							potencia_save_prof: v.cust_potencia_save_prof,
-							agilidade_save_prof: v.cust_agilidade_save_prof,
-							vigor_save_prof: v.cust_vigor_save_prof,
-							presenca_save_prof: v.cust_presenca_save_prof,
-							astucia_save_prof: v.cust_astucia_save_prof,
-							vontade_save_prof: v.cust_vontade_save_prof
+							potencia_resistencia_prof: v.cust_potencia_resistencia_prof,
+							agilidade_resistencia_prof: v.cust_agilidade_resistencia_prof,
+							vigor_resistencia_prof: v.cust_vigor_resistencia_prof,
+							presenca_resistencia_prof: v.cust_presenca_resistencia_prof,
+							astucia_resistencia_prof: v.cust_astucia_resistencia_prof,
+							vontade_resistencia_prof: v.cust_vontade_resistencia_prof
 						});
 					} else {
 						update = {};
@@ -11867,132 +11867,132 @@
 							case "":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Barbarian":
 								update["hitdietype"] = 12;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = "(@{pb})";
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = "(@{pb})";
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Bard":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = "(@{pb})";
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = "(@{pb})";
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = "(@{pb})";
 								break;
 							case "Cleric":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{astucia_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = "(@{pb})";
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = "(@{pb})";
+								update["vontade_resistencia_prof"] = "(@{pb})";
 								break;
 							case "Druid":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{astucia_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = "(@{pb})";
+								update["astucia_resistencia_prof"] = "(@{pb})";
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Fighter":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = "(@{pb})";
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = "(@{pb})";
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Monk":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = "(@{pb})";
+								update["agilidade_resistencia_prof"] = "(@{pb})";
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Paladin":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = "(@{pb})";
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = "(@{pb})";
+								update["vontade_resistencia_prof"] = "(@{pb})";
 								break;
 							case "Ranger":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "@{astucia_mod}+";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = "(@{pb})";
+								update["agilidade_resistencia_prof"] = "(@{pb})";
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Rogue":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = "(@{pb})";
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = "(@{pb})";
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = 0;
 								break;
 							case "Sorcerer":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = "(@{pb})";
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = "(@{pb})";
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = 0;
+								update["vontade_resistencia_prof"] = "(@{pb})";
 								break;
 							case "Warlock":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = "(@{pb})";
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = 0;
+								update["astucia_resistencia_prof"] = "(@{pb})";
+								update["vontade_resistencia_prof"] = "(@{pb})";
 								break;
 							case "Wizard":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "@{presenca_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["presenca_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = 0;
+								update["potencia_resistencia_prof"] = 0;
+								update["agilidade_resistencia_prof"] = 0;
+								update["vigor_resistencia_prof"] = 0;
+								update["presenca_resistencia_prof"] = "(@{pb})";
+								update["astucia_resistencia_prof"] = "(@{pb})";
+								update["vontade_resistencia_prof"] = 0;
 								break;
 						}
 						setAttrs(update, {
@@ -12292,7 +12292,7 @@
 						update_tool("all");
 					});
 					callbacks.push(function() {
-						update_all_saves();
+						update_all_resistencias();
 					});
 					callbacks.push(function() {
 						update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion"]);
@@ -12332,7 +12332,7 @@
 					};
 					if (!v["spellcasting_ability"] || (v["spellcasting_ability"] && v["spellcasting_ability"] === "0*")) {
 						update["spell_attack_bonus"] = "0";
-						update["spell_save_dc"] = "0";
+						update["spell_resistencia_dc"] = "0";
 						var callback = function() {
 							update_attacks("spells")
 						};
@@ -12382,7 +12382,7 @@
 							};
 							update["spell_attack_mod"] = spell_mod;
 							update["spell_attack_bonus"] = atk;
-							update["spell_save_dc"] = dc;
+							update["spell_resistencia_dc"] = dc;
 							var callback = function() {
 								update_attacks("spells")
 							};
@@ -12602,109 +12602,109 @@
 				});
 			};
 
-			var update_npc_saves = function() {
-				getAttrs(["npc_potencia_save_base", "npc_agilidade_save_base", "npc_vigor_save_base", "npc_presenca_save_base", "npc_astucia_save_base", "npc_vontade_save_base"], function(v) {
+			var update_npc_resistencias = function() {
+				getAttrs(["npc_potencia_resistencia_base", "npc_agilidade_resistencia_base", "npc_vigor_resistencia_base", "npc_presenca_resistencia_base", "npc_astucia_resistencia_base", "npc_vontade_resistencia_base"], function(v) {
 					var update = {};
-					var last_save = 0;
-					var cha_save_flag = 0;
-					var cha_save = "";
-					var wis_save_flag = 0;
-					var wis_save = "";
-					var int_save_flag = 0;
-					var int_save = "";
-					var con_save_flag = 0;
-					var con_save = "";
-					var dex_save_flag = 0;
-					var dex_save = "";
-					var str_save_flag = 0;
-					var str_save = "";
+					var last_resistencia = 0;
+					var cha_resistencia_flag = 0;
+					var cha_resistencia = "";
+					var wis_resistencia_flag = 0;
+					var wis_resistencia = "";
+					var int_resistencia_flag = 0;
+					var int_resistencia = "";
+					var con_resistencia_flag = 0;
+					var con_resistencia = "";
+					var dex_resistencia_flag = 0;
+					var dex_resistencia = "";
+					var str_resistencia_flag = 0;
+					var str_resistencia = "";
 					// 1 = Positive, 2 = Last, 3 = Negative, 4 = Last Negative
-					if (v.npc_vontade_save_base && v.npc_vontade_save_base != "@{vontade_mod}") {
-						cha_save = parseInt(v.npc_vontade_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							cha_save_flag = cha_save < 0 ? 4 : 2;
+					if (v.npc_vontade_resistencia_base && v.npc_vontade_resistencia_base != "@{vontade_mod}") {
+						cha_resistencia = parseInt(v.npc_vontade_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							cha_resistencia_flag = cha_resistencia < 0 ? 4 : 2;
 						} else {
-							cha_save_flag = cha_save < 0 ? 3 : 1;
+							cha_resistencia_flag = cha_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						cha_save_flag = 0;
-						cha_save = "";
+						cha_resistencia_flag = 0;
+						cha_resistencia = "";
 					};
-					if (v.npc_astucia_save_base && v.npc_astucia_save_base != "@{astucia_mod}") {
-						wis_save = parseInt(v.npc_astucia_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							wis_save_flag = wis_save < 0 ? 4 : 2;
+					if (v.npc_astucia_resistencia_base && v.npc_astucia_resistencia_base != "@{astucia_mod}") {
+						wis_resistencia = parseInt(v.npc_astucia_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							wis_resistencia_flag = wis_resistencia < 0 ? 4 : 2;
 						} else {
-							wis_save_flag = wis_save < 0 ? 3 : 1;
+							wis_resistencia_flag = wis_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						wis_save_flag = 0;
-						wis_save = "";
+						wis_resistencia_flag = 0;
+						wis_resistencia = "";
 					};
-					if (v.npc_presenca_save_base && v.npc_presenca_save_base != "@{presenca_mod}") {
-						int_save = parseInt(v.npc_presenca_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							int_save_flag = int_save < 0 ? 4 : 2;
+					if (v.npc_presenca_resistencia_base && v.npc_presenca_resistencia_base != "@{presenca_mod}") {
+						int_resistencia = parseInt(v.npc_presenca_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							int_resistencia_flag = int_resistencia < 0 ? 4 : 2;
 						} else {
-							int_save_flag = int_save < 0 ? 3 : 1;
+							int_resistencia_flag = int_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						int_save_flag = 0;
-						int_save = "";
+						int_resistencia_flag = 0;
+						int_resistencia = "";
 					};
-					if (v.npc_vigor_save_base && v.npc_vigor_save_base != "@{vigor_mod}") {
-						con_save = parseInt(v.npc_vigor_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							con_save_flag = con_save < 0 ? 4 : 2;
+					if (v.npc_vigor_resistencia_base && v.npc_vigor_resistencia_base != "@{vigor_mod}") {
+						con_resistencia = parseInt(v.npc_vigor_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							con_resistencia_flag = con_resistencia < 0 ? 4 : 2;
 						} else {
-							con_save_flag = con_save < 0 ? 3 : 1;
+							con_resistencia_flag = con_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						con_save_flag = 0;
-						con_save = "";
+						con_resistencia_flag = 0;
+						con_resistencia = "";
 					};
-					if (v.npc_agilidade_save_base && v.npc_agilidade_save_base != "@{agilidade_mod}") {
-						dex_save = parseInt(v.npc_agilidade_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							dex_save_flag = dex_save < 0 ? 4 : 2;
+					if (v.npc_agilidade_resistencia_base && v.npc_agilidade_resistencia_base != "@{agilidade_mod}") {
+						dex_resistencia = parseInt(v.npc_agilidade_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							dex_resistencia_flag = dex_resistencia < 0 ? 4 : 2;
 						} else {
-							dex_save_flag = dex_save < 0 ? 3 : 1;
+							dex_resistencia_flag = dex_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						dex_save_flag = 0;
-						dex_save = "";
+						dex_resistencia_flag = 0;
+						dex_resistencia = "";
 					};
-					if (v.npc_potencia_save_base && v.npc_potencia_save_base != "@{potencia_mod}") {
-						str_save = parseInt(v.npc_potencia_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							str_save_flag = str_save < 0 ? 4 : 2;
+					if (v.npc_potencia_resistencia_base && v.npc_potencia_resistencia_base != "@{potencia_mod}") {
+						str_resistencia = parseInt(v.npc_potencia_resistencia_base, 10);
+						if (last_resistencia === 0) {
+							last_resistencia = 1;
+							str_resistencia_flag = str_resistencia < 0 ? 4 : 2;
 						} else {
-							str_save_flag = str_save < 0 ? 3 : 1;
+							str_resistencia_flag = str_resistencia < 0 ? 3 : 1;
 						}
 					} else {
-						str_save_flag = 0;
-						str_save = "";
+						str_resistencia_flag = 0;
+						str_resistencia = "";
 					};
 
-					update["npc_saving_flag"] = "" + cha_save + wis_save + int_save + con_save + dex_save + str_save;
-					update["npc_potencia_save"] = str_save;
-					update["npc_potencia_save_flag"] = str_save_flag;
-					update["npc_agilidade_save"] = dex_save;
-					update["npc_agilidade_save_flag"] = dex_save_flag;
-					update["npc_vigor_save"] = con_save;
-					update["npc_vigor_save_flag"] = con_save_flag;
-					update["npc_presenca_save"] = int_save;
-					update["npc_presenca_save_flag"] = int_save_flag;
-					update["npc_astucia_save"] = wis_save;
-					update["npc_astucia_save_flag"] = wis_save_flag;
-					update["npc_vontade_save"] = cha_save;
-					update["npc_vontade_save_flag"] = cha_save_flag;
+					update["npc_saving_flag"] = "" + cha_resistencia + wis_resistencia + int_resistencia + con_resistencia + dex_resistencia + str_resistencia;
+					update["npc_potencia_resistencia"] = str_resistencia;
+					update["npc_potencia_resistencia_flag"] = str_resistencia_flag;
+					update["npc_agilidade_resistencia"] = dex_resistencia;
+					update["npc_agilidade_resistencia_flag"] = dex_resistencia_flag;
+					update["npc_vigor_resistencia"] = con_resistencia;
+					update["npc_vigor_resistencia_flag"] = con_resistencia_flag;
+					update["npc_presenca_resistencia"] = int_resistencia;
+					update["npc_presenca_resistencia_flag"] = int_resistencia_flag;
+					update["npc_astucia_resistencia"] = wis_resistencia;
+					update["npc_astucia_resistencia_flag"] = wis_resistencia_flag;
+					update["npc_vontade_resistencia"] = cha_resistencia;
+					update["npc_vontade_resistencia_flag"] = cha_resistencia_flag;
 					setAttrs(update, {
 						silent: true
 					});
@@ -13310,17 +13310,17 @@
 				});
 			};
 
-			var update_globalsaves = function(callback) {
-				getSectionIDs("savemod", function(ids) {
+			var update_globalresistencias = function(callback) {
+				getSectionIDs("resistenciamod", function(ids) {
 					if (ids) {
 						var fields = {};
 						var attr_name_list = [];
 						ids.forEach(function(id) {
 							fields[id] = {};
-							attr_name_list.push(`repeating_savemod_${id}_global_save_active_flag`, `repeating_savemod_${id}_global_save_roll`, `repeating_savemod_${id}_global_save_name`);
+							attr_name_list.push(`repeating_resistenciamod_${id}_global_resistencia_active_flag`, `repeating_resistenciamod_${id}_global_resistencia_roll`, `repeating_resistenciamod_${id}_global_resistencia_name`);
 						});
 						getAttrs(attr_name_list, function(attrs) {
-							var regex = /^repeating_savemod_(.+)_global_save_(active_flag|roll|name)$/;
+							var regex = /^repeating_resistenciamod_(.+)_global_resistencia_(active_flag|roll|name)$/;
 							_.each(attrs, function(obj, name) {
 								var r = regex.exec(name);
 								if (r) {
@@ -13329,18 +13329,18 @@
 							});
 
 							var update = {
-								global_save_mod: ""
+								global_resistencia_mod: ""
 							};
 							console.log("GLOBAL SAVES");
 							_.each(fields, function(element) {
 								if (element.active_flag != "0") {
 									if (element.roll && element.roll !== "") {
-										update["global_save_mod"] += element.roll + "[" + element.name + "]" + "+";
+										update["global_resistencia_mod"] += element.roll + "[" + element.name + "]" + "+";
 									}
 								}
 							});
-							if (update["global_save_mod"] !== "") {
-								update["global_save_mod"] = "[[" + update["global_save_mod"].replace(/\+(?=$)/, '') + "]]";
+							if (update["global_resistencia_mod"] !== "") {
+								update["global_resistencia_mod"] = "[[" + update["global_resistencia_mod"].replace(/\+(?=$)/, '') + "]]";
 							}
 							setAttrs(update, {
 								silent: true
