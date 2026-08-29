@@ -82,16 +82,16 @@
 									<input type="text" name="attr_vigor_base" value="10" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
+									<label>Pre</label>
+									<input type="text" name="attr_presenca_base" value="10" class="sheet-text-center">
+								</div>
+								<div class="sheet-form-group">
 									<label>Ast</label>
 									<input type="text" name="attr_astucia_base" value="10" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Von</label>
 									<input type="text" name="attr_vontade_base" value="10" class="sheet-text-center">
-								</div>
-								<div class="sheet-form-group">
-									<label>Pre</label>
-									<input type="text" name="attr_presenca_base" value="10" class="sheet-text-center">
 								</div>
 							</div>
 						</div>
@@ -111,16 +111,16 @@
 									<input type="text" name="attr_npc_con_save_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
+									<label>Pre</label>
+									<input type="text" name="attr_npc_cha_save_base" class="sheet-text-center">
+								</div>
+								<div class="sheet-form-group">
 									<label>Ast</label>
 									<input type="text" name="attr_npc_int_save_base" class="sheet-text-center">
 								</div>
 								<div class="sheet-form-group">
 									<label>Von</label>
 									<input type="text" name="attr_npc_wis_save_base" class="sheet-text-center">
-								</div>
-								<div class="sheet-form-group">
-									<label>Pre</label>
-									<input type="text" name="attr_npc_cha_save_base" class="sheet-text-center">
 								</div>
 							</div>
 							<input type="hidden" name="attr_npc_str_save" value="@{potencia_mod}">
@@ -277,9 +277,10 @@
 											<option value="@{potencia_mod}+">Potência</option>
 											<option value="@{agilidade_mod}+">Agilidade</option>
 											<option value="@{vigor_mod}+">Vigor</option>
+											<option value="@{presenca_mod}+">Presença</option>
 											<option value="@{astucia_mod}+">Astúcia</option>
 											<option value="@{vontade_mod}+">Vontade</option>
-											<option value="@{presenca_mod}+">Presença</option>
+
 										</select>
 									</div>
 									<div class="sheet-form-group">
@@ -411,6 +412,12 @@
 							<input type="hidden" name="attr_npc_con_negative" value="0" class="sheet-value-negative">
 							<span name="attr_vigor_mod" class="sheet-btn-npc-ability-mod"></span>
 						</button>
+						<button type="roll" name="roll_npc_cha" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Presença}} {{mod=[[[[@{presenca_mod}]][PRE]]]}} {{r1=[[@{d20}+[[@{presenca_mod}]][PRE]]]}} @{rtype}+[[@{presenca_mod}]][PRE]]]}} {{type=Ability}}" class="sheet-btn-npc-ability">
+							<span class="sheet-btn-npc-ability-title">PRE</span>
+							<span name="attr_presenca" class="sheet-btn-npc-ability-base"></span>
+							<input type="hidden" name="attr_npc_cha_negative" value="0" class="sheet-value-negative">
+							<span name="attr_presenca_mod" class="sheet-btn-npc-ability-mod"></span>
+						</button>
 						<button type="roll" name="roll_npc_int" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Astúcia}} {{mod=[[[[@{astucia_mod}]][AST]]]}} {{r1=[[@{d20}+[[@{astucia_mod}]][AST]]]}} @{rtype}+[[@{astucia_mod}]][AST]]]}} {{type=Ability}}" class="sheet-btn-npc-ability">
 							<span class="sheet-btn-npc-ability-title">AST</span>
 							<span name="attr_astucia" class="sheet-btn-npc-ability-base"></span>
@@ -422,12 +429,6 @@
 							<span name="attr_vontade" class="sheet-btn-npc-ability-base"></span>
 							<input type="hidden" name="attr_npc_wis_negative" value="0" class="sheet-value-negative">
 							<span name="attr_vontade_mod" class="sheet-btn-npc-ability-mod"></span>
-						</button>
-						<button type="roll" name="roll_npc_cha" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Presença}} {{mod=[[[[@{presenca_mod}]][PRE]]]}} {{r1=[[@{d20}+[[@{presenca_mod}]][PRE]]]}} @{rtype}+[[@{presenca_mod}]][PRE]]]}} {{type=Ability}}" class="sheet-btn-npc-ability">
-							<span class="sheet-btn-npc-ability-title">PRE</span>
-							<span name="attr_presenca" class="sheet-btn-npc-ability-base"></span>
-							<input type="hidden" name="attr_npc_cha_negative" value="0" class="sheet-value-negative">
-							<span name="attr_presenca_mod" class="sheet-btn-npc-ability-mod"></span>
 						</button>
 					</div>
 					<div class="sheet-npc-section sheet-npc-section-details">
@@ -1055,6 +1056,20 @@
 									</div>
 									<div class="sheet-container-attribute">
 										<div class="sheet-container-header">
+											<button type="roll" name="roll_presenca" value="@{wtype}&{template:simple} {{rname=Presença}} {{mod=@{presenca_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{presenca_mod}@{jack_attr}[PRE]]]}} @{rtype}+@{presenca_mod}@{jack_attr}[PRE]]]}} @{charname_output}">Presença</button>
+										</div>
+										<div class="sheet-container-body">
+											<span name="attr_presenca_mod" title="@{presenca_mod}">0</span>
+										</div>
+										<div class="sheet-container-footer">
+											<input type="text" name="attr_presenca_base" title="@{presenca}" value="10">
+											<input type="hidden" name="attr_presenca" value="10">
+											<input type="hidden" name="attr_presenca_flag" value="0" class="sheet-field-toggle">
+											<span name="attr_presenca"></span>
+										</div>
+									</div>
+									<div class="sheet-container-attribute">
+										<div class="sheet-container-header">
 											<button type="roll" name="roll_astucia" value="@{wtype}&{template:simple} {{rname=Astúcia}} {{mod=@{astucia_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{astucia_mod}@{jack_attr}[AST]]]}} @{rtype}+@{astucia_mod}@{jack_attr}[AST]]]}} @{charname_output}">Astúcia</button>
 										</div>
 										<div class="sheet-container-body">
@@ -1079,20 +1094,6 @@
 											<input type="hidden" name="attr_vontade" value="10">
 											<input type="hidden" name="attr_vontade_flag" value="0" class="sheet-field-toggle">
 											<span name="attr_vontade"></span>
-										</div>
-									</div>
-									<div class="sheet-container-attribute">
-										<div class="sheet-container-header">
-											<button type="roll" name="roll_presenca" value="@{wtype}&{template:simple} {{rname=Presença}} {{mod=@{presenca_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{presenca_mod}@{jack_attr}[PRE]]]}} @{rtype}+@{presenca_mod}@{jack_attr}[PRE]]]}} @{charname_output}">Presença</button>
-										</div>
-										<div class="sheet-container-body">
-											<span name="attr_presenca_mod" title="@{presenca_mod}">0</span>
-										</div>
-										<div class="sheet-container-footer">
-											<input type="text" name="attr_presenca_base" title="@{presenca}" value="10">
-											<input type="hidden" name="attr_presenca" value="10">
-											<input type="hidden" name="attr_presenca_flag" value="0" class="sheet-field-toggle">
-											<span name="attr_presenca"></span>
 										</div>
 									</div>
 								</div>
@@ -1133,6 +1134,14 @@
 										</div>
 										<div class="sheet-pc-saving-throw">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_presenca_save_prof" title="@{presenca_save_prof}" value="(@{pb})">
+												<span></span>
+											</div>
+											<span name="attr_presenca_save_bonus" title="@{presenca_save_bonus}">0</span>
+											<button type="roll" name="roll_presenca_save" value="@{wtype}&{template:simple} {{rname=Presença Save}} {{mod=@{presenca_save_bonus}}} {{r1=[[@{d20}+@{presenca_save_bonus}@{pbd_safe}]]}} @{rtype}+@{presenca_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Presença</button>
+										</div>
+										<div class="sheet-pc-saving-throw">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_astucia_save_prof" title="@{astucia_save_prof}" value="(@{pb})">
 												<span></span>
 											</div>
@@ -1146,14 +1155,6 @@
 											</div>
 											<span name="attr_vontade_save_bonus" title="@{vontade_save_bonus}">0</span>
 											<button type="roll" name="roll_vontade_save" value="@{wtype}&{template:simple} {{rname=Vontade Save}} {{mod=@{vontade_save_bonus}}} {{r1=[[@{d20}+@{vontade_save_bonus}@{pbd_safe}]]}} @{rtype}+@{vontade_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Vontade</button>
-										</div>
-										<div class="sheet-pc-saving-throw">
-											<div class="sheet-checkbox-image">
-												<input type="checkbox" name="attr_presenca_save_prof" title="@{presenca_save_prof}" value="(@{pb})">
-												<span></span>
-											</div>
-											<span name="attr_presenca_save_bonus" title="@{presenca_save_bonus}">0</span>
-											<button type="roll" name="roll_presenca_save" value="@{wtype}&{template:simple} {{rname=Presença Save}} {{mod=@{presenca_save_bonus}}} {{r1=[[@{d20}+@{presenca_save_bonus}@{pbd_safe}]]}} @{rtype}+@{presenca_save_bonus}@{pbd_safe}]]}} {{global=@{global_save_mod}}} @{charname_output}">Presença</button>
 										</div>
 										<input type="hidden" name="attr_global_save_mod_flag" class="sheet-field-toggle">
 										<div class="sheet-form sheet-form-inline">
@@ -1212,9 +1213,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade" selected="selected">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill sheet-pc-skill-animal-handling">
@@ -1228,9 +1230,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade" selected="selected">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1244,9 +1247,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia" selected="selected">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1260,9 +1264,10 @@
 												<option value="Potência" selected="selected">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1276,9 +1281,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença" selected="selected">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença" selected="selected">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1292,9 +1298,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia" selected="selected">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1308,9 +1315,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade" selected="selected">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1324,9 +1332,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença" selected="selected">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença" selected="selected">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1340,9 +1349,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia" selected="selected">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1356,9 +1366,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade" selected="selected">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1372,9 +1383,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia" selected="selected">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1388,9 +1400,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade" selected="selected">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1404,9 +1417,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença" selected="selected">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença" selected="selected">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1420,9 +1434,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença" selected="selected">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença" selected="selected">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1436,9 +1451,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia" selected="selected">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill sheet-pc-skill-sleight-of-hand">
@@ -1452,9 +1468,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade" selected="selected">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1468,9 +1485,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade" selected="selected">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -1484,9 +1502,10 @@
 												<option value="Potência">Pot</option>
 												<option value="Agilidade">Agi</option>
 												<option value="Vigor">Vig</option>
+												<option value="Presença">Pre</option>
 												<option value="Astúcia">Ast</option>
 												<option value="Vontade" selected="selected">Von</option>
-												<option value="Presença">Pre</option>
+
 											</select>
 										</div>
 									</div>
@@ -1530,7 +1549,7 @@
 																	<option value="@{astucia_mod}">Ast</option>
 																	<option value="@{vontade_mod}">Von</option>
 																	<option value="@{presenca_mod}">Pre</option>
-																	<option value="?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}|Presença,@{presenca_mod}}">Query</option>
+																	<option value="?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Presença,@{presenca_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}}">Query</option>
 																</select>
 																<label>Mods:</label>
 																<input type="text" name="attr_tool_mod" title="@{tool_mod}" value="0">
@@ -2144,9 +2163,10 @@
 											<option value="@{potencia_mod}+">POT</option>
 											<option value="@{agilidade_mod}+">AGI</option>
 											<option value="@{vigor_mod}+">VIG</option>
+											<option value="@{presenca_mod}+">PRE</option>
 											<option value="@{astucia_mod}+">AST</option>
 											<option value="@{vontade_mod}+">VON</option>
-											<option value="@{presenca_mod}+">PRE</option>
+
 										</select>
 									</div>
 								</div>
@@ -2362,9 +2382,10 @@
 																	<option value="Potência" selected="selected">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>vs DC:</label>
 																<select name="attr_savedc">
@@ -3569,9 +3590,10 @@
 											<option value="@{potencia_mod}+">POT</option>
 											<option value="@{agilidade_mod}+">AGI</option>
 											<option value="@{vigor_mod}+">VIG</option>
+											<option value="@{presenca_mod}+">PRE</option>
 											<option value="@{astucia_mod}+">AST</option>
 											<option value="@{vontade_mod}+">VON</option>
-											<option value="@{presenca_mod}+">PRE</option>
+
 										</select>
 									</div>
 								</div>
@@ -3726,9 +3748,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -3787,9 +3810,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -3951,9 +3975,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -4012,9 +4037,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -4176,9 +4202,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -4237,9 +4264,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -4401,9 +4429,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -4462,9 +4491,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -4626,9 +4656,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -4687,9 +4718,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -4851,9 +4883,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -4912,9 +4945,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -5076,9 +5110,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -5137,9 +5172,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -5301,9 +5337,10 @@
 																	<option value="@{potencia_mod}+">POT</option>
 																	<option value="@{agilidade_mod}+">AGI</option>
 																	<option value="@{vigor_mod}+">VIG</option>
+																	<option value="@{presenca_mod}+">PRE</option>
 																	<option value="@{astucia_mod}+">AST</option>
 																	<option value="@{vontade_mod}+">VON</option>
-																	<option value="@{presenca_mod}+">PRE</option>
+
 																</select>
 															</div>
 															<div class="sheet-form-group">
@@ -5362,9 +5399,10 @@
 																	<option value="Potência">POT</option>
 																	<option value="Agilidade">AGI</option>
 																	<option value="Vigor">VIG</option>
+																	<option value="Presença">PRE</option>
 																	<option value="Astúcia">AST</option>
 																	<option value="Vontade">VON</option>
-																	<option value="Presença">PRE</option>
+
 																</select>
 																<label>Effect:</label>
 																<input type="text" name="attr_spellsavesuccess">
@@ -5527,9 +5565,10 @@
 																		<option value="@{potencia_mod}+">POT</option>
 																		<option value="@{agilidade_mod}+">AGI</option>
 																		<option value="@{vigor_mod}+">VIG</option>
+																		<option value="@{presenca_mod}+">PRE</option>
 																		<option value="@{astucia_mod}+">AST</option>
 																		<option value="@{vontade_mod}+">VON</option>
-																		<option value="@{presenca_mod}+">PRE</option>
+
 																	</select>
 																</div>
 																<div class="sheet-form-group">
@@ -5588,9 +5627,10 @@
 																		<option value="Potência">POT</option>
 																		<option value="Agilidade">AGI</option>
 																		<option value="Vigor">VIG</option>
+																		<option value="Presença">PRE</option>
 																		<option value="Astúcia">AST</option>
 																		<option value="Vontade">VON</option>
-																		<option value="Presença">PRE</option>
+
 																	</select>
 																	<label>Effect:</label>
 																	<input type="text" name="attr_spellsavesuccess">
@@ -5752,9 +5792,10 @@
 																		<option value="@{potencia_mod}+">POT</option>
 																		<option value="@{agilidade_mod}+">AGI</option>
 																		<option value="@{vigor_mod}+">VIG</option>
+																		<option value="@{presenca_mod}+">PRE</option>
 																		<option value="@{astucia_mod}+">AST</option>
 																		<option value="@{vontade_mod}+">VON</option>
-																		<option value="@{presenca_mod}+">PRE</option>
+
 																	</select>
 																</div>
 																<div class="sheet-form-group">
@@ -5813,9 +5854,10 @@
 																		<option value="Potência">POT</option>
 																		<option value="Agilidade">AGI</option>
 																		<option value="Vigor">VIG</option>
+																		<option value="Presença">PRE</option>
 																		<option value="Astúcia">AST</option>
 																		<option value="Vontade">VON</option>
-																		<option value="Presença">PRE</option>
+
 																	</select>
 																	<label>Effect:</label>
 																	<input type="text" name="attr_spellsavesuccess">
@@ -6113,9 +6155,10 @@
 														<option value="@{potencia_mod}+">POT</option>
 														<option value="@{agilidade_mod}+">AGI</option>
 														<option value="@{vigor_mod}+">VIG</option>
+														<option value="@{presenca_mod}+">PRE</option>
 														<option value="@{astucia_mod}+">AST</option>
 														<option value="@{vontade_mod}+">VON</option>
-														<option value="@{presenca_mod}+">PRE</option>
+
 													</select>
 												</div>
 												<div class="sheet-form-group">
@@ -6149,6 +6192,12 @@
 															</label>
 														</div>
 														<div class="sheet-form-group">
+															<label class="sheet-form-checkbox" title="@{cust_presenca_save_prof}">
+																<input type="checkbox" name="attr_cust_presenca_save_prof" value="(@{pb})">
+																<span>Presença</span>
+															</label>
+														</div>
+														<div class="sheet-form-group">
 															<label class="sheet-form-checkbox" title="@{cust_astucia_save_prof}">
 																<input type="checkbox" name="attr_cust_astucia_save_prof" value="(@{pb})">
 																<span>Astúcia</span>
@@ -6158,12 +6207,6 @@
 															<label class="sheet-form-checkbox" title="@{cust_vontade_save_prof}">
 																<input type="checkbox" name="attr_cust_vontade_save_prof" value="(@{pb})">
 																<span>Vontade</span>
-															</label>
-														</div>
-														<div class="sheet-form-group">
-															<label class="sheet-form-checkbox" title="@{cust_presenca_save_prof}">
-																<input type="checkbox" name="attr_cust_presenca_save_prof" value="(@{pb})">
-																<span>Presença</span>
 															</label>
 														</div>
 													</div>
@@ -6421,9 +6464,10 @@
 																<option value="Potência">POT</option>
 																<option value="Agilidade">AGI</option>
 																<option value="Vigor">VIG</option>
+																<option value="Presença">PRE</option>
 																<option value="Astúcia">AST</option>
 																<option value="Vontade">VON</option>
-																<option value="Presença">PRE</option>
+
 															</select>
 															<span>+</span>
 															<select name="attr_custom_ac_part2" title="@{custom_ac_part2}">
@@ -6431,9 +6475,10 @@
 																<option value="Potência">POT</option>
 																<option value="Agilidade">AGI</option>
 																<option value="Vigor">VIG</option>
+																<option value="Presença">PRE</option>
 																<option value="Astúcia">AST</option>
 																<option value="Vontade">VON</option>
-																<option value="Presença">PRE</option>
+
 															</select>
 														</div>
 														<div class="sheet-form-group">
@@ -8664,7 +8709,7 @@
 						var query = false;
 						if (v["repeating_tool_" + tool_id + "_toolattr_base"] && v["repeating_tool_" + tool_id + "_toolattr_base"].substring(0, 2) === "?{") {
 							update["repeating_tool_" + tool_id + "_toolattr"] = "QUERY";
-							var mod = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}|Presença,@{presenca_mod}}";
+							var mod = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Presença,@{presenca_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}}";
 							if (v["repeating_tool_" + tool_id + "_tool_mod"]) {
 								mod = mod + "+" + v["repeating_tool_" + tool_id + "_tool_mod"];
 							}
@@ -9826,7 +9871,7 @@
 							toolname: page.name.toLowerCase()
 						}
 						update["repeating_tool_" + newrowid + "_toolname"] = page.name;
-						if (!existing.base) update["repeating_tool_" + newrowid + "_toolattr_base"] = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}|Presença,@{presenca_mod}}";
+						if (!existing.base) update["repeating_tool_" + newrowid + "_toolattr_base"] = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Presença,@{presenca_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}}";
 						update["repeating_tool_" + newrowid + "_options-flag"] = 0;
 						if (page.data["toolbonus_base"]) update["repeating_tool_" + newrowid + "_toolbonus_base"] = "(@{pb}*2)";
 						repeating.prof_names.push(page.name.toLowerCase());
@@ -10040,7 +10085,7 @@
 										toolname: prof.toLowerCase()
 									}
 									update["repeating_tool_" + newrowid + "_toolname"] = prof;
-									if (!existing.base) update["repeating_tool_" + newrowid + "_toolattr_base"] = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}|Presença,@{presenca_mod}}";
+									if (!existing.base) update["repeating_tool_" + newrowid + "_toolattr_base"] = "?{Attribute?|Potência,@{potencia_mod}|Agilidade,@{agilidade_mod}|Vigor,@{vigor_mod}|Presença,@{presenca_mod}|Astúcia,@{astucia_mod}|Vontade,@{vontade_mod}}";
 									update["repeating_tool_" + newrowid + "_options-flag"] = 0;
 									repeating.prof_names.push(page.name.toLowerCase());
 									callbacks.push(function() {
@@ -10412,36 +10457,35 @@
 					};
 					if (mod.indexOf("saving throws") > -1) {
 						update_all_saves();
-					};
-					if (mod.indexOf("potencia save") > -1) {
+					};if (mod.indexOf("potencia save") > -1) {
 						update_save("potencia");
 					} else if (mod.indexOf("potencia") > -1) {
 						update_attr("potencia");
 					};
-					if (mod.indexOf("agilidade save") > -1) {
+if (mod.indexOf("agilidade save") > -1) {
 						update_save("agilidade");
 					} else if (mod.indexOf("agilidade") > -1) {
 						update_attr("agilidade");
 					};
-					if (mod.indexOf("vigor save") > -1) {
+if (mod.indexOf("vigor save") > -1) {
 						update_save("vigor");
 					} else if (mod.indexOf("vigor") > -1) {
 						update_attr("vigor");
 					};
-					if (mod.indexOf("astucia save") > -1) {
+if (mod.indexOf("presenca save") > -1) {
+						update_save("presenca");
+					} else if (mod.indexOf("presenca") > -1) {
+						update_attr("presenca");
+					};
+if (mod.indexOf("astucia save") > -1) {
 						update_save("astucia");
 					} else if (mod.indexOf("astucia") > -1) {
 						update_attr("astucia");
 					};
-					if (mod.indexOf("vontade save") > -1) {
+if (mod.indexOf("vontade save") > -1) {
 						update_save("vontade");
 					} else if (mod.indexOf("vontade") > -1) {
 						update_attr("vontade");
-					};
-					if (mod.indexOf("presenca save") > -1) {
-						update_save("presenca");
-					} else if (mod.indexOf("presenca") > -1) {
-						update_attr("presenca");
 					};
 					if (mod.indexOf("ability checks") > -1) {
 						update_all_ability_checks();
@@ -11846,7 +11890,7 @@
 			};
 
 			var update_class = function() {
-				getAttrs(["class", "base_level", "custom_class", "cust_classname", "cust_hitdietype", "cust_spellcasting_ability", "cust_potencia_save_prof", "cust_agilidade_save_prof", "cust_vigor_save_prof", "cust_astucia_save_prof", "cust_vontade_save_prof", "cust_presenca_save_prof", "potencia_save_prof", "agilidade_save_prof", "vigor_save_prof", "astucia_save_prof", "vontade_save_prof", "presenca_save_prof", "subclass", "multiclass1", "multiclass1_subclass", "multiclass2", "multiclass2_subclass", "multiclass3", "multiclass3_subclass", "npc"], function(v) {
+				getAttrs(["class", "base_level", "custom_class", "cust_classname", "cust_hitdietype", "cust_spellcasting_ability", "cust_potencia_save_prof", "cust_agilidade_save_prof", "cust_vigor_save_prof", "cust_presenca_save_prof", "cust_astucia_save_prof", "cust_vontade_save_prof", "potencia_save_prof", "agilidade_save_prof", "vigor_save_prof", "presenca_save_prof", "astucia_save_prof", "vontade_save_prof", "subclass", "multiclass1", "multiclass1_subclass", "multiclass2", "multiclass2_subclass", "multiclass3", "multiclass3_subclass", "npc"], function(v) {
 					if (v.npc && v.npc == "1") {
 						return;
 					}
@@ -11867,132 +11911,67 @@
 							case "":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Barbarian":
 								update["hitdietype"] = 12;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = "(@{pb})";update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = "(@{pb})";update["presenca_save_prof"] = 0;update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Bard":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{presenca_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = "(@{pb})";
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = "(@{pb})";update["vigor_save_prof"] = 0;update["presenca_save_prof"] = "(@{pb})";update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Cleric":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = "(@{pb})";
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = "(@{pb})";update["astucia_save_prof"] = 0;update["vontade_save_prof"] = "(@{pb})";
 								break;
 							case "Druid":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = "(@{pb})";update["vontade_save_prof"] = "(@{pb})";
 								break;
 							case "Fighter":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = "(@{pb})";update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = "(@{pb})";update["presenca_save_prof"] = 0;update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Monk":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = "(@{pb})";update["agilidade_save_prof"] = "(@{pb})";update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Paladin":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "@{presenca_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = "(@{pb})";
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = "(@{pb})";update["astucia_save_prof"] = 0;update["vontade_save_prof"] = "(@{pb})";
 								break;
 							case "Ranger":
 								update["hitdietype"] = 10;
 								update["spellcasting_ability"] = "@{vontade_mod}+";
-								update["potencia_save_prof"] = "(@{pb})";
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = "(@{pb})";update["agilidade_save_prof"] = "(@{pb})";update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Rogue":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "0*";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = "(@{pb})";
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = "(@{pb})";update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = "(@{pb})";update["vontade_save_prof"] = 0;
 								break;
 							case "Sorcerer":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "@{presenca_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = "(@{pb})";
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = 0;
-								update["presenca_save_prof"] = "(@{pb})";
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = "(@{pb})";update["presenca_save_prof"] = "(@{pb})";update["astucia_save_prof"] = 0;update["vontade_save_prof"] = 0;
 								break;
 							case "Warlock":
 								update["hitdietype"] = 8;
 								update["spellcasting_ability"] = "@{presenca_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = 0;
-								update["vontade_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = "(@{pb})";
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = "(@{pb})";update["astucia_save_prof"] = 0;update["vontade_save_prof"] = "(@{pb})";
 								break;
 							case "Wizard":
 								update["hitdietype"] = 6;
 								update["spellcasting_ability"] = "@{astucia_mod}+";
-								update["potencia_save_prof"] = 0;
-								update["agilidade_save_prof"] = 0;
-								update["vigor_save_prof"] = 0;
-								update["astucia_save_prof"] = "(@{pb})";
-								update["vontade_save_prof"] = "(@{pb})";
-								update["presenca_save_prof"] = 0;
+								update["potencia_save_prof"] = 0;update["agilidade_save_prof"] = 0;update["vigor_save_prof"] = 0;update["presenca_save_prof"] = 0;update["astucia_save_prof"] = "(@{pb})";update["vontade_save_prof"] = "(@{pb})";
 								break;
 						}
 						setAttrs(update, {
@@ -13604,6 +13583,5 @@
 		</div>
 	</div>
 </div>
-
 
 
